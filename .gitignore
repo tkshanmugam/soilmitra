@@ -1,36 +1,7 @@
 # ========================
-# Node / Next.js
-# ========================
-node_modules/
-.next/
-out/
-dist/
-build/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Vercel deployment
-.vercel
-
-# ========================
 # Python / FastAPI
 # ========================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -96,9 +67,7 @@ coverage.xml
 dmypy.json
 .pyre/
 
-# ========================
 # IDE / Editor
-# ========================
 .vscode/
 .idea/
 *.swp
