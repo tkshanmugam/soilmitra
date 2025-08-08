@@ -1,0 +1,168 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "failedToLoad": "Failed to load page",
+    "language": "Language",
+    "english": "English",
+    "tamil": "Tamil"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "chat": "Chat",
+    "community": "Community",
+    "admin": "Admin"
+  },
+  "home": {
+    "title": "Welcome to SoilMitra",
+    "subtitle": "Your AI-powered organic farming and fertilizer schedule assistant.",
+    "description": {
+      "part1": "SoilMitra is an online service created by SREE Marudhan Agro Care for farmers.",
+      "part2": "It helps farmers use organic fertilizers correctly. Our goal is to improve soil health, select suitable organic fertilizers for crops, and provide simple guidance on when and how to use them.",
+      "part3": "This reduces the need for chemical fertilizers and allows farming to be done naturally, easily, and at lower cost.",
+      "part4": "SoilMitra will be a friend and guide for every farmer who wants to grow healthy crops and protect farm land."
+    },
+    "features": {
+      "title": "Why Choose SoilMitra?",
+      "aiPowered": {
+        "title": "AI-Powered",
+        "description": "Advanced machine learning algorithms provide personalized recommendations for your specific soil conditions and crop requirements."
+      },
+      "organicFocus": {
+        "title": "Organic Focus",
+        "description": "Specialized in organic farming practices, helping you maintain soil health while maximizing crop yields naturally."
+      },
+      "scheduleManagement": {
+        "title": "Schedule Management",
+        "description": "Get precise fertilizer application schedules tailored to your crop growth stages and seasonal requirements."
+      }
+    }
+  },
+  "chat": {
+    "title": "Chat with SoilMitra",
+    "placeholder": "Ask me about organic farming, fertilizer schedules, or soil health...",
+    "send": "Send",
+    "clear": "Clear Chat",
+    "thinking": "Thinking...",
+    "error": "Error occurred while sending message",
+    "aiName": "SoilMitra AI",
+    "status": "Online • Ready to help",
+    "startConversation": "Start a conversation",
+    "you": "You",
+    "pressEnter": "Press Enter to send",
+    "languageSwitch": "Language Switch",
+    "switchToEnglish": "Switch to English",
+    "switchToTamil": "Switch to Tamil",
+    "features": {
+      "title": "What can I help you with?",
+      "cropPlanning": {
+        "title": "Crop Planning",
+        "description": "Get recommendations for the best crops to plant based on your soil and climate conditions."
+      },
+      "fertilizerAdvice": {
+        "title": "Fertilizer Advice",
+        "description": "Learn about optimal fertilizer schedules and organic alternatives for your crops."
+      },
+      "growingTips": {
+        "title": "Growing Tips",
+        "description": "Get expert advice on soil health, pest management, and sustainable farming practices."
+      }
+    }
+  },
+  "about": {
+    "title": "About SoilMitra",
+    "description": "Learn more about our mission to revolutionize organic farming practices.",
+    "mission": {
+      "title": "Our Mission",
+      "description1": "We are committed to revolutionizing agriculture through sustainable, AI-driven solutions that empower farmers to achieve optimal crop yields while preserving our environment for future generations.",
+      "description2": "Our platform combines cutting-edge technology with traditional farming wisdom to create a comprehensive solution for modern agricultural challenges."
+    },
+    "vision": {
+      "title": "Vision 2030",
+      "description": "To become the leading AI-powered agricultural platform, helping 1000+ farmers worldwide adopt sustainable farming practices."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We believe in farming practices that protect our environment and ensure long-term agricultural viability."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuously pushing the boundaries of technology to solve complex agricultural challenges."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Building a global community of farmers who share knowledge and support each other's success."
+      }
+    },
+    "journey": {
+      "title": "Our Journey",
+      "2020": "Company Founded",
+      "2021": "First 100 Farmers",
+      "2022": "AI Platform Launch",
+      "2023": "500+ Active Users"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with our team for support and inquiries.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Discover our range of organic farming solutions and fertilizers.",
+    "features": {
+      "title": "Product Features",
+      "organic": {
+        "title": "100% Organic",
+        "description": "All products are made from natural ingredients, ensuring safe and sustainable farming practices."
+      },
+      "easyApplication": {
+        "title": "Easy Application",
+        "description": "Simple application methods with clear instructions for optimal results."
+      },
+      "provenResults": {
+        "title": "Proven Results",
+        "description": "Tested and proven effective by thousands of farmers across different soil types."
+      },
+      "aiRecommendations": {
+        "title": "AI Recommendations",
+        "description": "Get personalized product recommendations based on your soil and crop requirements."
+      },
+      "expertSupport": {
+        "title": "Expert Support",
+        "description": "Access to agricultural experts for guidance on product usage and farming practices."
+      },
+      "environmentFriendly": {
+        "title": "Environment Friendly",
+        "description": "Eco-friendly products that protect soil health and promote sustainable agriculture."
+      }
+    },
+    "categories": {
+      "liquidProducts": "Liquid Products (Per Liter)",
+      "bacterialProducts": "Bacterial Products (Per Liter)",
+      "bulkProducts": "Bulk Products"
+    },
+    "demo": {
+      "title": "See Our Products in Action",
+      "description": "Experience the power of organic farming with our comprehensive product range. See how our products can transform your agricultural practices and boost your crop yields naturally.",
+      "viewDemo": "View Demo",
+      "contactUs": "Contact Us",
+      "demoTitle": "Product Demo",
+      "demoDescription": "Explore our product range and see how organic farming can revolutionize your agricultural practices."
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "description": "Manage website content and settings."
+  }
+} 
