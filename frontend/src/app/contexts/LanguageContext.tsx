@@ -21,6 +21,12 @@ const translations = {
     'nav.chat': 'Chat',
     'nav.contact': 'Contact',
     'nav.community': 'Community',
+    'navigation.home': 'Home',
+    'navigation.about': 'About',
+    'navigation.product': 'Product',
+    'navigation.chat': 'Chat',
+    'navigation.contact': 'Contact',
+    'navigation.community': 'Community',
     
     // Home page
     'home.welcome': 'Welcome to',
@@ -61,7 +67,7 @@ const translations = {
     'about.journey.2023': '500+ Active Users',
     
     // Product page
-    'product.title': 'Our Products',
+    'product.title': 'Organic Fertilizer',
     'product.subtitle': 'Comprehensive range of organic farming products for sustainable agriculture.',
     'product.categories.title': 'Organic Farming Products',
     'product.liquid.title': 'Liquid Products (Per Liter)',
@@ -84,6 +90,30 @@ const translations = {
     'product.demo.subtitle': 'Experience the power of organic farming with our comprehensive product range. See how our products can transform your agricultural practices and boost your crop yields naturally.',
     'product.demo.button': 'View Demo',
     'product.demo.contact': 'Contact Us',
+    
+    // Products page (matching the product page usage)
+    'products.title': 'Organic Fertilizer',
+    'products.description': 'Comprehensive range of organic farming products for sustainable agriculture.',
+    'products.categories.liquidProducts': 'Liquid Products (Per Liter)',
+    'products.categories.bacterialProducts': 'Bacterial Products (Per Liter)',
+    'products.categories.bulkProducts': 'Bulk Products',
+    'products.features.title': 'Product Features',
+    'products.features.organic.title': '100% Organic',
+    'products.features.organic.description': 'All products are made from natural ingredients, ensuring safe and sustainable farming practices.',
+    'products.features.easyApplication.title': 'Easy Application',
+    'products.features.easyApplication.description': 'Simple application methods with clear instructions for optimal results.',
+    'products.features.provenResults.title': 'Proven Results',
+    'products.features.provenResults.description': 'Tested and proven effective by thousands of farmers across different soil types.',
+    'products.features.expertSupport.title': 'Expert Support',
+    'products.features.expertSupport.description': 'Access to agricultural experts for guidance on product usage and farming practices.',
+    'products.features.environmentFriendly.title': 'Environment Friendly',
+    'products.features.environmentFriendly.description': 'Eco-friendly products that protect soil health and promote sustainable agriculture.',
+    'products.demo.title': 'See Our Products in Action',
+    'products.demo.description': 'Experience the power of organic farming with our comprehensive product range. See how our products can transform your agricultural practices and boost your crop yields naturally.',
+    'products.demo.viewDemo': 'View Demo',
+    'products.demo.contactUs': 'Contact Us',
+    'products.demo.demoTitle': 'Product Demo',
+    'products.demo.demoDescription': 'Watch how our organic fertilizers work in real farming scenarios.',
     
     // Chat page
     'chat.title': 'Chat with SoilMitra',
@@ -118,12 +148,49 @@ const translations = {
     'admin.login': 'Admin Login',
     'admin.username': 'Username',
     'admin.password': 'Password',
+    
+    // Common
+    'common.language': 'Language',
     'admin.login.button': 'Login',
     'admin.logout': 'Logout',
     'admin.dashboard': 'Admin Dashboard',
     'admin.pages': 'Page Editor',
     'admin.audit': 'Audit Logs',
     'admin.chat': 'Chat Sessions',
+    
+    // Seeds page
+    'seeds.title': '🌱 Premium Seeds Collection',
+    'seeds.subtitle': 'Discover our comprehensive collection of high-quality seeds for every type of garden and farm',
+    'seeds.categories.title': 'Explore Our Seed Categories',
+    'seeds.categories.subtitle': 'From traditional vegetables to exotic varieties, we have the perfect seeds for your agricultural needs',
+    'seeds.explore': 'Explore Seeds',
+    'seeds.cta.title': 'Need Help Choosing the Right Seeds?',
+    'seeds.cta.subtitle': 'Our AI farming assistant can help you select the perfect seeds for your climate and soil conditions',
+    'seeds.cta.button': 'Chat with AI Assistant',
+    
+    // Seed categories
+    'seeds.tomato': 'Tomato Varieties',
+    'seeds.tomato.desc': 'Discover a wide range of tomato seeds for your garden',
+    'seeds.brinjal': 'Brinjal Varieties',
+    'seeds.brinjal.desc': 'Premium brinjal seeds for healthy harvests',
+    'seeds.ladies-finger': 'Ladies Finger Varieties',
+    'seeds.ladies-finger.desc': 'Fresh okra seeds for traditional and modern gardens',
+    'seeds.chilli': 'Chilli Varieties',
+    'seeds.chilli.desc': 'Spice up your garden with diverse chilli varieties',
+    'seeds.climbers': 'Climbers Plants',
+    'seeds.climbers.desc': 'Vertical gardening solutions with climbing plants',
+    'seeds.tubers': 'Tubers',
+    'seeds.tubers.desc': 'Root vegetables and tuber crops for your farm',
+    'seeds.exotic': 'Exotic Vegetables',
+    'seeds.exotic.desc': 'Unique and rare vegetable varieties',
+    'seeds.herbs': 'Herbals',
+    'seeds.herbs.desc': 'Medicinal and culinary herbs for your garden',
+    'seeds.flowers': 'Flower Seeds',
+    'seeds.flowers.desc': 'Beautiful flowers to enhance your garden aesthetics',
+    'seeds.spinach': 'Spinach / Greens',
+    'seeds.spinach.desc': 'Nutritious leafy greens for healthy living',
+    'seeds.tree': 'Tree Seeds',
+    'seeds.tree.desc': 'Fruit trees and ornamental trees for your landscape',
   },
   ta: {
     // Navigation
@@ -133,6 +200,12 @@ const translations = {
     'nav.chat': 'அரட்டை',
     'nav.contact': 'தொடர்பு',
     'nav.community': 'சமூகம்',
+    'navigation.home': 'முகப்பு',
+    'navigation.about': 'எங்களை பற்றி',
+    'navigation.product': 'பொருட்கள்',
+    'navigation.chat': 'அரட்டை',
+    'navigation.contact': 'தொடர்பு',
+    'navigation.community': 'சமூகம்',
     
     // Home page
     'home.welcome': 'வரவேற்கிறோம்',
@@ -173,7 +246,7 @@ const translations = {
     'about.journey.2023': '500+ செயலில் உள்ள பயனர்கள்',
     
     // Product page
-    'product.title': 'எங்கள் பொருட்கள்',
+    'product.title': 'கரிம உரம்',
     'product.subtitle': 'நிலைக்கு விவசாயத்திற்கான கரிம விவசாய பொருட்களின் விரிவான வரம்பு.',
     'product.categories.title': 'கரிம விவசாய பொருட்கள்',
     'product.liquid.title': 'திரவ பொருட்கள் (லிட்டருக்கு)',
@@ -196,6 +269,30 @@ const translations = {
     'product.demo.subtitle': 'எங்கள் விரிவான பொருள் வரம்புடன் கரிம விவசாயத்தின் சக்தியை அனுபவிக்கவும்.',
     'product.demo.button': 'டெமோ பார்க்கவும்',
     'product.demo.contact': 'எங்களை தொடர்பு கொள்ளவும்',
+    
+    // Products page (matching the product page usage)
+    'products.title': 'கரிம உரம்',
+    'products.description': 'நிலைக்கு விவசாயத்திற்கான கரிம விவசாய பொருட்களின் விரிவான வரம்பு.',
+    'products.categories.liquidProducts': 'திரவ பொருட்கள் (லிட்டருக்கு)',
+    'products.categories.bacterialProducts': 'பாக்டீரியா பொருட்கள் (லிட்டருக்கு)',
+    'products.categories.bulkProducts': 'மொத்த பொருட்கள்',
+    'products.features.title': 'பொருள் அம்சங்கள்',
+    'products.features.organic.title': '100% கரிம',
+    'products.features.organic.description': 'அனைத்து பொருட்களும் இயற்கை பொருட்களால் தயாரிக்கப்படுகின்றன, பாதுகாப்பான மற்றும் நிலைக்கு விவசாய நடைமுறைகளை உறுதிசெய்கின்றன.',
+    'products.features.easyApplication.title': 'எளிதான பயன்பாடு',
+    'products.features.easyApplication.description': 'உகந்த முடிவுகளுக்கான தெளிவான வழிமுறைகளுடன் எளிய பயன்பாட்டு முறைகள்.',
+    'products.features.provenResults.title': 'நிரூபிக்கப்பட்ட முடிவுகள்',
+    'products.features.provenResults.description': 'பல்வேறு மண் வகைகளில் ஆயிரக்கணக்கான விவசாயிகளால் சோதிக்கப்பட்டு நிரூபிக்கப்பட்டது.',
+    'products.features.expertSupport.title': 'நிபுணர் ஆதரவு',
+    'products.features.expertSupport.description': 'பொருள் பயன்பாடு மற்றும் விவசாய நடைமுறைகளில் வழிகாட்டுதலுக்கான விவசாய நிபுணர்களுக்கான அணுகல்.',
+    'products.features.environmentFriendly.title': 'சுற்றுச்சூழல் நட்பு',
+    'products.features.environmentFriendly.description': 'மண் ஆரோக்கியத்தைப் பாதுகாக்கும் சுற்றுச்சூழல் நட்பு பொருட்கள் மற்றும் நிலைக்கு விவசாயத்தை ஊக்குவிக்கின்றன.',
+    'products.demo.title': 'எங்கள் பொருட்களை செயலில் காண்க',
+    'products.demo.description': 'எங்கள் விரிவான பொருள் வரம்புடன் கரிம விவசாயத்தின் சக்தியை அனுபவிக்கவும். எங்கள் பொருட்கள் உங்கள் விவசாய நடைமுறைகளை எப்படி மாற்ற முடியும் மற்றும் உங்கள் பயிர் மகசூலை இயற்கையாக அதிகரிக்க முடியும் என்பதைப் பாருங்கள்.',
+    'products.demo.viewDemo': 'டெமோ பார்க்கவும்',
+    'products.demo.contactUs': 'எங்களை தொடர்பு கொள்ளவும்',
+    'products.demo.demoTitle': 'பொருள் டெமோ',
+    'products.demo.demoDescription': 'எங்கள் கரிம உரங்கள் உண்மையான விவசாய சூழ்நிலைகளில் எப்படி வேலை செய்கின்றன என்பதைப் பாருங்கள்.',
     
     // Chat page
     'chat.title': 'SoilMitra உடன் அரட்டை',
@@ -230,12 +327,49 @@ const translations = {
     'admin.login': 'நிர்வாகி உள்நுழைவு',
     'admin.username': 'பயனர்பெயர்',
     'admin.password': 'கடவுச்சொல்',
+    
+    // Common
+    'common.language': 'மொழி',
     'admin.login.button': 'உள்நுழைக',
     'admin.logout': 'வெளியேறு',
     'admin.dashboard': 'நிர்வாகி டாஷ்போர்டு',
     'admin.pages': 'பக்கம் திருத்தி',
     'admin.audit': 'தணிக்கை பதிவுகள்',
     'admin.chat': 'அரட்டை அமர்வுகள்',
+    
+    // Seeds page
+    'seeds.title': '🌱 பிரீமியம் விதைகள் தொகுப்பு',
+    'seeds.subtitle': 'ஒவ்வொரு வகையான தோட்டம் மற்றும் பண்ணைக்கும் உயர்தர விதைகளின் விரிவான தொகுப்பைக் கண்டறியுங்கள்',
+    'seeds.categories.title': 'எங்கள் விதை வகைகளை ஆராயுங்கள்',
+    'seeds.categories.subtitle': 'பாரம்பரிய காய்கறிகளிலிருந்து வெளிநாட்டு வகைகள் வரை, உங்கள் விவசாய தேவைகளுக்கு சரியான விதைகள் உள்ளன',
+    'seeds.explore': 'விதைகளை ஆராயுங்கள்',
+    'seeds.cta.title': 'சரியான விதைகளைத் தேர்வு செய்ய உதவி தேவையா?',
+    'seeds.cta.subtitle': 'எங்கள் AI விவசாய உதவியாளர் உங்கள் காலநிலை மற்றும் மண் நிலைமைகளுக்கு சரியான விதைகளைத் தேர்வு செய்ய உதவ முடியும்',
+    'seeds.cta.button': 'AI உதவியாளருடன் அரட்டை',
+    
+    // Seed categories
+    'seeds.tomato': 'தக்காளி வகைகள்',
+    'seeds.tomato.desc': 'உங்கள் தோட்டத்திற்கான பரந்த அளவிலான தக்காளி விதைகளைக் கண்டறியுங்கள்',
+    'seeds.brinjal': 'கத்தரிக்காய் வகைகள்',
+    'seeds.brinjal.desc': 'ஆரோக்கியமான அறுவடைக்கான பிரீமியம் கத்தரிக்காய் விதைகள்',
+    'seeds.ladies-finger': 'வெண்டைக்காய் வகைகள்',
+    'seeds.ladies-finger.desc': 'பாரம்பரிய மற்றும் நவீன தோட்டங்களுக்கான புதிய வெண்டைக்காய் விதைகள்',
+    'seeds.chilli': 'மிளகாய் வகைகள்',
+    'seeds.chilli.desc': 'பல்வேறு மிளகாய் வகைகளுடன் உங்கள் தோட்டத்தை காரமாக்குங்கள்',
+    'seeds.climbers': 'ஏறும் செடிகள்',
+    'seeds.climbers.desc': 'ஏறும் செடிகளுடன் செங்குத்து தோட்டக்கலை தீர்வுகள்',
+    'seeds.tubers': 'கிழங்குகள்',
+    'seeds.tubers.desc': 'உங்கள் பண்ணைக்கான வேர் காய்கறிகள் மற்றும் கிழங்கு பயிர்கள்',
+    'seeds.exotic': 'வெளிநாட்டு காய்கறிகள்',
+    'seeds.exotic.desc': 'தனித்துவமான மற்றும் அரிய காய்கறி வகைகள்',
+    'seeds.herbs': 'மூலிகைகள்',
+    'seeds.herbs.desc': 'உங்கள் தோட்டத்திற்கான மருத்துவ மற்றும் சமையல் மூலிகைகள்',
+    'seeds.flowers': 'மலர் விதைகள்',
+    'seeds.flowers.desc': 'உங்கள் தோட்ட அழகியலை மேம்படுத்தும் அழகான மலர்கள்',
+    'seeds.spinach': 'கீரை / பச்சைக்காய்கள்',
+    'seeds.spinach.desc': 'ஆரோக்கியமான வாழ்க்கைக்கான ஊட்டச்சத்து நிறைந்த இலை காய்கறிகள்',
+    'seeds.tree': 'மர விதைகள்',
+    'seeds.tree.desc': 'உங்கள் நிலப்பரப்பிற்கான பழ மரங்கள் மற்றும் அலங்கார மரங்கள்',
   }
 };
 

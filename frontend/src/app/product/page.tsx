@@ -323,18 +323,6 @@ export default function ProductPage() {
             
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">🤖</span>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{t("products.features.aiRecommendations.title")}</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t("products.features.aiRecommendations.description")}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xl">📱</span>
                 </div>

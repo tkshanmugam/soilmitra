@@ -7,12 +7,14 @@ interface LanguageContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
   t: (key: string) => string;
+  mounted: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(defaultLocale);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // Load saved language preference from localStorage
@@ -20,6 +22,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (savedLocale && (savedLocale === 'en' || savedLocale === 'ta')) {
       setLocaleState(savedLocale);
     }
+    setMounted(true);
   }, []);
 
   const setLocale = (newLocale: Locale) => {
@@ -54,7 +57,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ locale, setLocale, t }}>
+    <LanguageContext.Provider value={{ locale, setLocale, t, mounted }}>
       {children}
     </LanguageContext.Provider>
   );

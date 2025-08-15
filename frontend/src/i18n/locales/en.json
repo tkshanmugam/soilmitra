@@ -5,14 +5,15 @@
     "failedToLoad": "Failed to load page",
     "language": "Language",
     "english": "English",
-    "tamil": "Tamil"
+    "tamil": "Tamil",
+    "aiFarmingAssistant": "AI Farming Assistant"
   },
   "navigation": {
     "home": "Home",
-    "about": "About",
+    "about": "About Us",
     "products": "Products",
     "contact": "Contact",
-    "chat": "Chat",
+    "chat": "Chats",
     "community": "Community",
     "admin": "Admin"
   },
@@ -36,9 +37,21 @@
         "description": "Specialized in organic farming practices, helping you maintain soil health while maximizing crop yields naturally."
       },
       "scheduleManagement": {
-        "title": "Schedule Management",
-        "description": "Get precise fertilizer application schedules tailored to your crop growth stages and seasonal requirements."
+        "title": "Smart Scheduling",
+        "description": "Get personalized fertilizer schedules and reminders based on your crop type, soil conditions, and local weather patterns."
       }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Farming?",
+      "subtitle": "Join thousands of farmers who are already using SoilMitra to improve their yields and soil health naturally.",
+      "startChat": "Start AI Chat",
+      "exploreProducts": "Explore Products",
+      "startChattingNow": "Start Chatting Now"
+    },
+    "trust": {
+      "aiPowered": "AI-Powered",
+      "organic": "100% Organic",
+      "expertSupport": "Expert Support"
     }
   },
   "chat": {
@@ -100,11 +113,11 @@
       }
     },
     "journey": {
-      "title": "Our Journey",
-      "2020": "Company Founded",
-      "2021": "First 100 Farmers",
-      "2022": "AI Platform Launch",
-      "2023": "500+ Active Users"
+      "title": "🌱 Planting the Seeds of Our Future",
+      "2025": "Founded with a vision to transform agriculture",
+      "2026": "Welcomed our first 100 farmers;\nAI begins reshaping the fields",
+      "2027": "Unveiled our fully AI-powered farming ecosystem",
+      "2028": "500+ farmers flourishing through innovation"
     }
   },
   "contact": {
@@ -134,10 +147,6 @@
         "title": "Proven Results",
         "description": "Tested and proven effective by thousands of farmers across different soil types."
       },
-      "aiRecommendations": {
-        "title": "AI Recommendations",
-        "description": "Get personalized product recommendations based on your soil and crop requirements."
-      },
       "expertSupport": {
         "title": "Expert Support",
         "description": "Access to agricultural experts for guidance on product usage and farming practices."
@@ -164,5 +173,65 @@
   "admin": {
     "title": "Admin Panel",
     "description": "Manage website content and settings."
+  },
+  "seeds": {
+    "hero": {
+      "title": "🌱 Premium Seeds Collection",
+      "subtitle": "Discover our comprehensive collection of high-quality seeds for every type of garden and farm"
+    },
+    "categories": {
+      "title": "Explore Our Seed Categories",
+      "subtitle": "From traditional vegetables to exotic varieties, we have the perfect seeds for your agricultural needs"
+    },
+    "cta": {
+      "title": "Need Help Choosing the Right Seeds?",
+      "subtitle": "Our AI farming assistant can help you select the perfect seeds for your climate and soil conditions",
+      "button": "Chat with AI Assistant"
+    },
+    "exploreSeeds": "Explore Seeds",
+    "tomato": {
+      "title": "Tomato Varieties",
+      "desc": "Discover a wide range of tomato seeds for your garden"
+    },
+    "brinjal": {
+      "title": "Brinjal Varieties",
+      "desc": "Premium brinjal seeds for healthy harvests"
+    },
+    "ladies-finger": {
+      "title": "Ladies Finger Varieties",
+      "desc": "Fresh okra seeds for traditional and modern gardens"
+    },
+    "chilli": {
+      "title": "Chilli Varieties",
+      "desc": "Spice up your garden with diverse chilli varieties"
+    },
+    "climbers": {
+      "title": "Climbers Plants",
+      "desc": "Vertical gardening solutions with climbing plants"
+    },
+    "tubers": {
+      "title": "Tubers",
+      "desc": "Root vegetables and tuber crops for your farm"
+    },
+    "exotic": {
+      "title": "Exotic Vegetables",
+      "desc": "Unique and rare vegetable varieties"
+    },
+    "herbs": {
+      "title": "Herbals",
+      "desc": "Medicinal and culinary herbs for your garden"
+    },
+    "flowers": {
+      "title": "Flower Seeds",
+      "desc": "Beautiful flowers to enhance your garden aesthetics"
+    },
+    "spinach": {
+      "title": "Spinach / Greens",
+      "desc": "Nutritious leafy greens for healthy living"
+    },
+    "tree": {
+      "title": "Tree Seeds",
+      "desc": "Fruit trees and ornamental trees for your landscape"
+    }
   }
 } 

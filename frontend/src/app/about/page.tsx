@@ -41,14 +41,30 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#FAF3E0] to-[#E8F5E8] py-12 px-4">
+      <motion.section 
+        className="relative bg-gradient-to-br from-[#FAF3E0] to-[#E8F5E8] py-12 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <AnimatedSection>
               <motion.div 
                 className="inline-flex items-center justify-center w-20 h-20 bg-[#2E7D32] rounded-full mb-6 shadow-lg"
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 100, 
+                  damping: 15, 
+                  duration: 0.8 
+                }}
+                whileHover={{ 
+                  scale: 1.1, 
+                  rotate: [0, 10, -10, 0],
+                  transition: { duration: 0.6 }
+                }}
               >
                 <span className="text-3xl">🏢</span>
               </motion.div>
@@ -74,15 +90,29 @@ export default function AboutPage() {
         {/* Decorative Elements */}
         <motion.div 
           className="absolute top-10 right-10 w-24 h-24 bg-[#66BB6A]/20 rounded-full opacity-60"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.6, 0.8, 0.6] }}
-          transition={{ duration: 4, repeat: Infinity }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.6 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 50, 
+            damping: 20, 
+            delay: 0.5 
+          }}
+          whileHover={{ scale: 1.2, opacity: 0.8 }}
         />
         <motion.div 
           className="absolute bottom-10 left-10 w-32 h-32 bg-[#66BB6A]/20 rounded-full opacity-60"
-          animate={{ scale: [1, 1.1, 1], opacity: [0.6, 0.7, 0.6] }}
-          transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.6 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 50, 
+            damping: 20, 
+            delay: 0.7 
+          }}
+          whileHover={{ scale: 1.1, opacity: 0.7 }}
         />
-      </section>
+      </motion.section>
 
       {/* Mission Section */}
       <section className="py-12 px-4 bg-white">
@@ -201,32 +231,78 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[#2E7D32] to-[#66BB6A]">
+      <motion.section 
+        className="py-20 px-4 bg-gradient-to-r from-[#2E7D32] to-[#66BB6A]"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ 
+          type: "spring", 
+          stiffness: 100, 
+          damping: 20, 
+          duration: 0.8 
+        }}
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-white mb-16">
-            {t("about.journey.title")}
-          </h2>
+          <motion.h2 
+            className="text-3xl font-bold text-center text-white mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 100, 
+              damping: 20, 
+              delay: 0.2 
+            }}
+          >
+            🌱 Planting the Seeds of Our Future
+          </motion.h2>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="text-white">
-              <div className="text-3xl font-bold mb-2">2020</div>
-              <div className="text-white/90">{t("about.journey.2020")}</div>
-            </div>
-            <div className="text-white">
-              <div className="text-3xl font-bold mb-2">2021</div>
-              <div className="text-white/90">{t("about.journey.2021")}</div>
-            </div>
-            <div className="text-white">
-              <div className="text-3xl font-bold mb-2">2022</div>
-              <div className="text-white/90">{t("about.journey.2022")}</div>
-            </div>
-            <div className="text-white">
-              <div className="text-3xl font-bold mb-2">2023</div>
-              <div className="text-white/90">{t("about.journey.2023")}</div>
-            </div>
+            {[
+              { year: "2025", text: t("about.journey.2025") },
+              { year: "2026", text: t("about.journey.2026") },
+              { year: "2027", text: t("about.journey.2027") },
+              { year: "2028", text: t("about.journey.2028") }
+            ].map((item, index) => (
+              <motion.div 
+                key={item.year}
+                className="text-white"
+                initial={{ opacity: 0, y: 30, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 100, 
+                  damping: 20, 
+                  delay: 0.4 + index * 0.2 
+                }}
+                whileHover={{ 
+                  y: -5, 
+                  scale: 1.05,
+                  transition: { type: "spring", stiffness: 400, damping: 10 }
+                }}
+              >
+                <motion.div 
+                  className="text-3xl font-bold mb-2"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  {item.year}
+                </motion.div>
+                <motion.div 
+                  className="text-white/90 whitespace-pre-line"
+                  whileHover={{ color: "rgba(255, 255, 255, 1)" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {item.text}
+                </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 } 
