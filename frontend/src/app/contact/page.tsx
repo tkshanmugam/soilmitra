@@ -1,21 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ContactPage() {
-  const [data, setData] = useState<{ title: string; content: string } | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [formStatus, setFormStatus] = useState<{ type: "success" | "error"; msg: string } | null>(null);
   const [submitting, setSubmitting] = useState(false);
-
-  useEffect(() => {
-    fetch(`http://localhost:8000/api/pages/contact?lang=en`)
-      .then(res => res.json())
-      .then(setData)
-      .catch(() => setError("Failed to load page"))
-      .finally(() => setLoading(false));
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -26,13 +15,8 @@ export default function ContactPage() {
     setSubmitting(true);
     setFormStatus(null);
     try {
-      const res = await fetch("http://localhost:8000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Failed to send message");
-      setFormStatus({ type: "success", msg: "Message sent!" });
+      // For now, just simulate success since we removed the API call
+      setFormStatus({ type: "success", msg: "Message sent! (Demo mode)" });
       setForm({ name: "", email: "", message: "" });
     } catch {
       setFormStatus({ type: "error", msg: "Failed to send message" });
@@ -40,29 +24,6 @@ export default function ContactPage() {
       setSubmitting(false);
     }
   };
-
-  if (loading) return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-green-50">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
-        <p className="text-gray-600 text-sm">Loading...</p>
-      </div>
-    </div>
-  );
-  
-  if (error) return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-green-50">
-      <div className="text-center max-w-md mx-auto px-4">
-        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="text-2xl">⚠️</span>
-        </div>
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">Something went wrong</h2>
-        <p className="text-gray-600">{error}</p>
-      </div>
-    </div>
-  );
-  
-  if (!data) return null;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100 overflow-x-hidden">

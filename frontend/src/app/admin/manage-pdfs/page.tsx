@@ -1,4 +1,6 @@
 "use client";
+import { API_URLS } from "@/config/api";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
@@ -43,7 +45,7 @@ export default function ManagePDFsPage() {
       const token = getAdminToken();
       if (!token) return;
 
-      const res = await fetch("http://localhost:8000/api/admin/rag-pdfs", {
+      const res = await fetch(API_URLS.ADMIN_RAG_PDFS(), {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -66,7 +68,7 @@ export default function ManagePDFsPage() {
       const token = getAdminToken();
       if (!token) return;
 
-      const res = await fetch(`http://localhost:8000/api/admin/rag-pdfs/${encodeURIComponent(filename)}`, {
+      const res = await fetch(API_URLS.ADMIN_RAG_PDFS() + `/${encodeURIComponent(filename)}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`

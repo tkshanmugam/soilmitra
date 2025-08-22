@@ -1,4 +1,6 @@
 "use client";
+import { API_URLS } from "@/config/api";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -37,7 +39,7 @@ export default function PageEditor() {
       const slugs = ["home", "about", "product", "contact"];
       const results = await Promise.all(
         slugs.map(async slug => {
-          const res = await fetch(`http://localhost:8000/api/admin/pages/${slug}`, {
+          const res = await fetch(API_URLS.ADMIN_PAGES(slug), {
             headers: { Authorization: `Bearer ${token}` },
           });
           if (!res.ok) return null;
@@ -66,7 +68,7 @@ export default function PageEditor() {
     if (!confirm("Delete this page?")) return;
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/admin/pages/${slug}`, {
+      const res = await fetch(API_URLS.ADMIN_PAGES(slug), {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -96,8 +98,8 @@ export default function PageEditor() {
     try {
       const method = editing ? "PUT" : "POST";
       const url = editing
-        ? `http://localhost:8000/api/admin/pages/${form.slug}`
-        : `http://localhost:8000/api/admin/pages`;
+        ? API_URLS.ADMIN_PAGES(form.slug)
+        : API_URLS.ADMIN_PAGES();
       const res = await fetch(url, {
         method,
         headers: {

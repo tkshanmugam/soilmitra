@@ -1,4 +1,6 @@
 "use client";
+import { API_URLS } from "@/config/api";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -27,7 +29,7 @@ export default function AuditLogViewer() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:8000/api/admin/audit-logs", {
+      const res = await fetch(API_URLS.ADMIN_AUDIT_LOGS(), {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("Failed to fetch logs");

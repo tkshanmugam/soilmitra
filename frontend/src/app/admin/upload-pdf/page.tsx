@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { API_URLS } from "@/config/api";
 
 export default function AdminUploadPDFPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -51,7 +52,7 @@ export default function AdminUploadPDFPage() {
         return;
       }
 
-      const res = await fetch("http://localhost:8000/api/admin/upload-pdf", {
+      const res = await fetch(API_URLS.ADMIN_UPLOAD_PDF(), {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`

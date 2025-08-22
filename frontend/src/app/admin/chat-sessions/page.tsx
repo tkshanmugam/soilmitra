@@ -1,4 +1,6 @@
 "use client";
+import { API_URLS } from "@/config/api";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 // @ts-ignore
@@ -28,7 +30,7 @@ export default function AdminChatSessions() {
   useEffect(() => {
     const token = localStorage.getItem("admin_token");
     if (!token) router.replace("/admin/login");
-    fetch("http://localhost:8000/api/admin/chat-sessions", {
+    fetch(API_URLS.ADMIN_CHAT_SESSIONS(), {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
@@ -42,7 +44,7 @@ export default function AdminChatSessions() {
     setError("");
     const token = localStorage.getItem("admin_token");
     try {
-      const res = await fetch(`http://localhost:8000/api/admin/chat-messages/${session_id}`, {
+      const res = await fetch(API_URLS.ADMIN_CHAT_MESSAGES(session_id), {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error();
@@ -57,7 +59,7 @@ export default function AdminChatSessions() {
 
   const fetchMessages = async (session_id: string) => {
     const token = localStorage.getItem("admin_token");
-    const res = await fetch(`http://localhost:8000/api/admin/chat-messages/${session_id}`, {
+    const res = await fetch(API_URLS.ADMIN_CHAT_MESSAGES(session_id), {
       headers: { Authorization: `Bearer ${token}` },
     });
     if (!res.ok) throw new Error();

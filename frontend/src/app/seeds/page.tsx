@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useState, useEffect } from "react";
+import ImprovedHero from "../components/ImprovedHero";
 
 const seedCategories = [
   {
@@ -92,220 +93,132 @@ export default function SeedsPage() {
     setMounted(true);
   }, []);
 
-  // Show loading state during SSR to prevent hydration mismatch
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
-        <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-green-600 text-white py-20">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              🌱 Premium Seeds Collection
-            </h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-              Discover our comprehensive collection of high-quality seeds for every type of garden and farm
-            </p>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Explore Our Seed Categories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From traditional vegetables to exotic varieties, we have the perfect seeds for your agricultural needs
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {seedCategories.map((category, index) => (
-              <div key={category.href} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
-                  <div className={`h-32 bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                    <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                      {category.icon}
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
-                      {category.labelKey === 'seeds.tomato.title' ? 'Tomato Varieties' : 
-                       category.labelKey === 'seeds.brinjal.title' ? 'Brinjal Varieties' :
-                       category.labelKey === 'seeds.ladies-finger.title' ? 'Ladies Finger Varieties' :
-                       category.labelKey === 'seeds.chilli.title' ? 'Chilli Varieties' :
-                       category.labelKey === 'seeds.climbers.title' ? 'Climbers Plants' :
-                       category.labelKey === 'seeds.tubers.title' ? 'Tubers' :
-                       category.labelKey === 'seeds.exotic.title' ? 'Exotic Vegetables' :
-                       category.labelKey === 'seeds.herbs.title' ? 'Herbals' :
-                       category.labelKey === 'seeds.flowers.title' ? 'Flower Seeds' :
-                       category.labelKey === 'seeds.spinach.title' ? 'Spinach / Greens' :
-                       'Tree Seeds'}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {category.descKey === 'seeds.tomato.desc' ? 'Discover a wide range of tomato seeds for your garden' :
-                       category.descKey === 'seeds.brinjal.desc' ? 'Premium brinjal seeds for healthy harvests' :
-                       category.descKey === 'seeds.ladies-finger.desc' ? 'Fresh okra seeds for traditional and modern gardens' :
-                       category.descKey === 'seeds.chilli.desc' ? 'Spice up your garden with diverse chilli varieties' :
-                       category.descKey === 'seeds.climbers.desc' ? 'Vertical gardening solutions with climbing plants' :
-                       category.descKey === 'seeds.tubers.desc' ? 'Root vegetables and tuber crops for your farm' :
-                       category.descKey === 'seeds.exotic.desc' ? 'Unique and rare vegetable varieties' :
-                       category.descKey === 'seeds.herbs.desc' ? 'Medicinal and culinary herbs for your garden' :
-                       category.descKey === 'seeds.flowers.desc' ? 'Beautiful flowers to enhance your garden aesthetics' :
-                       category.descKey === 'seeds.spinach.desc' ? 'Nutritious leafy greens for healthy living' :
-                       'Fruit trees and ornamental trees for your landscape'}
-                    </p>
-                    <div className="mt-4 flex items-center text-emerald-600 font-medium text-sm group-hover:text-emerald-700">
-                      Explore Seeds
-                      <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
-                        →
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <motion.div 
-        className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-green-600 text-white py-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            {t("seeds.hero.title")}
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            {t("seeds.hero.subtitle")}
-          </motion.p>
-        </div>
-        
-        {/* Floating Elements */}
-        <motion.div 
-          className="absolute top-10 left-10 text-4xl opacity-20"
-          animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          🌱
-        </motion.div>
-        <motion.div 
-          className="absolute top-20 right-20 text-3xl opacity-20"
-          animate={{ y: [0, -15, 0], rotate: [0, -5, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        >
-          🌿
-        </motion.div>
-        <motion.div 
-          className="absolute bottom-20 left-1/4 text-2xl opacity-20"
-          animate={{ y: [0, -10, 0], rotate: [0, 3, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        >
-          🌸
-        </motion.div>
-      </motion.div>
+      <ImprovedHero
+        title="Native Seeds Collection"
+        subtitle="Discover our premium collection of native seeds, carefully selected for optimal growth and sustainability in your local environment."
+        backgroundGradient="from-emerald-600 via-green-600 to-teal-600"
+        height="min-h-[60vh]"
+      />
 
-      {/* Categories Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t("seeds.categories.title")}
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t("seeds.categories.subtitle")}
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {seedCategories.map((category, index) => (
-            <motion.div
-              key={category.href}
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="group"
-            >
-              <Link href={category.href}>
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
-                  <div className={`h-32 bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                    <motion.span 
-                      className="text-5xl group-hover:scale-110 transition-transform duration-300"
-                      whileHover={{ rotate: 10 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                    >
-                      {category.icon}
-                    </motion.span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
-                      {t(category.labelKey)}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {t(category.descKey)}
-                    </p>
-                    <motion.div 
-                      className="mt-4 flex items-center text-emerald-600 font-medium text-sm group-hover:text-emerald-700"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    >
-                      {t("seeds.exploreSeeds")}
-                      <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
-                        →
-                      </span>
-                    </motion.div>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-20"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-        >
-          <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              {t("seeds.cta.title")}
-            </h3>
-            <p className="text-lg text-green-100 mb-6">
-              {t("seeds.cta.subtitle")}
+      {/* Seeds Categories */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Explore Our Seed Categories
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From vegetables to herbs, find the perfect seeds for your organic garden
             </p>
-            <Link 
-              href="/chat"
-              className="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-300"
-            >
-              <span className="mr-2">💬</span>
-              {t("seeds.cta.button")}
-            </Link>
           </div>
-        </motion.div>
-      </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {seedCategories.map((category, index) => (
+              <motion.div
+                key={category.href}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="group"
+              >
+                <Link href={category.href}>
+                  <div className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105`}>
+                    <div className="text-center">
+                      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        {category.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {t(category.labelKey)}
+                      </h3>
+                      <p className="text-white/90 text-sm">
+                        {t(category.descKey)}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Seeds?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Quality, sustainability, and local adaptation for your farming success
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🌱</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">100% Organic</h3>
+              <p className="text-gray-600">
+                All our seeds are certified organic and free from genetic modifications, ensuring natural growth and sustainability.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏠</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Locally Adapted</h3>
+              <p className="text-gray-600">
+                Seeds specifically selected and adapted for local climate conditions, soil types, and growing seasons.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">High Germination</h3>
+              <p className="text-gray-600">
+                Rigorously tested seeds with proven high germination rates and excellent crop performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-emerald-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Start Growing?
+          </h2>
+          <p className="text-xl text-white/90 mb-8">
+            Choose from our extensive collection of native seeds and begin your organic farming journey today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg">
+              Browse Seeds
+            </button>
+            <button className="px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/50 hover:bg-white/10 transition-all duration-300">
+              Get Expert Advice
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

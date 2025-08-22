@@ -1,4 +1,6 @@
 "use client";
+import { API_URLS } from "@/config/api";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -15,7 +17,7 @@ export default function AdminLoginPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:8000/api/admin/login", {
+      const res = await fetch(API_URLS.ADMIN_LOGIN(), {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ username, password }),
