@@ -113,9 +113,9 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl">👥</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Expert Community</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Expert Support</h3>
               <p className="text-gray-600">
-                Connect with fellow farmers and agricultural experts to share knowledge and experiences.
+                Get personalized guidance from agricultural experts and AI-powered recommendations.
               </p>
             </AnimatedCard>
           </div>

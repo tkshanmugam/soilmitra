@@ -14,7 +14,6 @@
     "products": "Products",
     "contact": "Contact",
     "chat": "Chats",
-    "community": "Community",
     "admin": "Admin"
   },
   "home": {
@@ -106,10 +105,6 @@
       "innovation": {
         "title": "Innovation",
         "description": "Continuously pushing the boundaries of technology to solve complex agricultural challenges."
-      },
-      "community": {
-        "title": "Community",
-        "description": "Building a global community of farmers who share knowledge and support each other's success."
       }
     },
     "journey": {

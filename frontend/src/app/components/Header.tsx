@@ -29,7 +29,6 @@ export default function Header() {
     { href: "/", label: mounted ? t("navigation.home") : "Home", icon: "🏠" },
     { href: "/about", label: mounted ? t("navigation.about") : "About Us", icon: "ℹ️" },
     { href: "/product", label: mounted ? t("navigation.products") : "Products", icon: "🛍️" },
-    { href: "/community", label: mounted ? t("navigation.community") : "Community", icon: "👥" },
     { href: "/contact", label: mounted ? t("navigation.contact") : "Contact", icon: "📧" },
     { href: "/chat", label: mounted ? t("navigation.chat") : "Chats", icon: "💬" },
   ];

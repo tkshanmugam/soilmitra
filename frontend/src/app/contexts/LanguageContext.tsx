@@ -1,12 +1,15 @@
 "use client";
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'en' | 'ta';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
+  locale: Language; // Alias for language
+  setLocale: (lang: Language) => void; // Alias for setLanguage
   t: (key: string) => string;
+  mounted: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -20,13 +23,11 @@ const translations = {
     'nav.product': 'Product',
     'nav.chat': 'Chat',
     'nav.contact': 'Contact',
-    'nav.community': 'Community',
     'navigation.home': 'Home',
     'navigation.about': 'About',
     'navigation.product': 'Product',
     'navigation.chat': 'Chat',
     'navigation.contact': 'Contact',
-    'navigation.community': 'Community',
     
     // Home page
     'home.welcome': 'Welcome to',
@@ -58,8 +59,6 @@ const translations = {
     'about.values.sustainability.desc': 'We believe in farming practices that protect our environment and ensure long-term agricultural viability.',
     'about.values.innovation': 'Innovation',
     'about.values.innovation.desc': 'Continuously pushing the boundaries of technology to solve complex agricultural challenges.',
-    'about.values.community': 'Community',
-    'about.values.community.desc': 'Building a global community of farmers who share knowledge and support each other\'s success.',
     'about.journey.title': 'Our Journey',
     'about.journey.2020': 'Company Founded',
     'about.journey.2021': 'First 100 Farmers',
@@ -199,13 +198,11 @@ const translations = {
     'nav.product': 'பொருட்கள்',
     'nav.chat': 'அரட்டை',
     'nav.contact': 'தொடர்பு',
-    'nav.community': 'சமூகம்',
     'navigation.home': 'முகப்பு',
     'navigation.about': 'எங்களை பற்றி',
     'navigation.product': 'பொருட்கள்',
     'navigation.chat': 'அரட்டை',
     'navigation.contact': 'தொடர்பு',
-    'navigation.community': 'சமூகம்',
     
     // Home page
     'home.welcome': 'வரவேற்கிறோம்',
@@ -237,8 +234,6 @@ const translations = {
     'about.values.sustainability.desc': 'நமது சுற்றுச்சூழலைப் பாதுகாக்கும் விவசாய நடைமுறைகளை நாங்கள் நம்புகிறோம்.',
     'about.values.innovation': 'புதுமை',
     'about.values.innovation.desc': 'சிக்கலான விவசாய சவால்களைத் தீர்க்க தொழில்நுட்பத்தின் எல்லைகளை தொடர்ந்து தள்ளுகிறோம்.',
-    'about.values.community': 'சமூகம்',
-    'about.values.community.desc': 'அறிவை பகிர்ந்து ஒருவருக்கொருவர் ஆதரிக்கும் உலகளாவிய விவசாயிகளின் சமூகத்தை உருவாக்குகிறோம்.',
     'about.journey.title': 'எங்கள் பயணம்',
     'about.journey.2020': 'நிறுவனம் நிறுவப்பட்டது',
     'about.journey.2021': 'முதல் 100 விவசாயிகள்',
@@ -375,13 +370,25 @@ const translations = {
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations[typeof language]] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ 
+      language, 
+      setLanguage, 
+      locale: language, 
+      setLocale: setLanguage, 
+      t, 
+      mounted 
+    }}>
       {children}
     </LanguageContext.Provider>
   );

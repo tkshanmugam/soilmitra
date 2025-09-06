@@ -12,7 +12,7 @@ interface Message {
 }
 
 export default function ChatPage() {
-  const { t, mounted, language } = useLanguage();
+  const { t, language, mounted } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);

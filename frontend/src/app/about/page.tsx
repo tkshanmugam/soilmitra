@@ -120,9 +120,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl">👥</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Community</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Support Network</h3>
               <p className="text-gray-600">
-                Building a supportive network of farmers, experts, and agricultural professionals to share knowledge and experiences.
+                Providing comprehensive support through AI-powered tools and expert guidance for sustainable farming success.
               </p>
             </AnimatedCard>
           </div>
