@@ -137,7 +137,7 @@ export default function AdminChatSessions() {
       msgs.forEach(m => {
         const line = `[${new Date(m.timestamp).toLocaleString()}] ${m.sender}: ${m.message}`;
         const lines = doc.splitTextToSize(line, 180);
-        lines.forEach(l => {
+        lines.forEach((l: string) => {
           doc.text(l, 10, y);
           y += 7;
           if (y > 280) {

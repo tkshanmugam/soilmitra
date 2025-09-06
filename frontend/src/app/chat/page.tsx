@@ -12,10 +12,11 @@ interface Message {
 }
 
 export default function ChatPage() {
-  const { t, mounted } = useLanguage();
+  const { t, mounted, language } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -48,6 +49,8 @@ export default function ChatPage() {
         },
         body: JSON.stringify({
           message: inputText,
+          session_id: sessionId,
+          language: language,
         }),
       });
 
@@ -59,7 +62,7 @@ export default function ChatPage() {
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.response || "I'm sorry, I couldn't process your request.",
+        text: data.reply || "I'm sorry, I couldn't process your request.",
         sender: "bot",
         timestamp: new Date(),
       };

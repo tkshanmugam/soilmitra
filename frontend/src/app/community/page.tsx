@@ -1,6 +1,5 @@
 "use client";
 import { useLanguage } from "../../contexts/LanguageContext";
-import ImprovedHero from "../components/ImprovedHero";
 
 export default function CommunityPage() {
   const { t, mounted } = useLanguage();
@@ -16,11 +15,16 @@ export default function CommunityPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <ImprovedHero
-        title="Join Our Community"
-        subtitle="Connect with fellow farmers, share experiences, and learn from agricultural experts in our growing community."
-        backgroundGradient="from-teal-600 via-emerald-600 to-green-600"
-      />
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-teal-600 via-emerald-600 to-green-600">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            Join Our Community
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Connect with fellow farmers, share experiences, and learn from agricultural experts in our growing community.
+          </p>
+        </div>
+      </section>
 
       {/* Community Features */}
       <section className="py-20 px-4 bg-white">
