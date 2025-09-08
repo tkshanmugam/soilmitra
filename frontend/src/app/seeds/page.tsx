@@ -108,7 +108,7 @@ export default function SeedsPage() {
         title="Native Seeds Collection"
         subtitle="Discover our premium collection of native seeds, carefully selected for optimal growth and sustainability in your local environment."
         backgroundGradient="from-emerald-600 via-green-600 to-teal-600"
-        height="min-h-[60vh]"
+        height="min-h-[47vh]"
       />
 
       {/* Seeds Categories */}

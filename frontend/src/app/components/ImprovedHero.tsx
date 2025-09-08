@@ -17,7 +17,7 @@ export default function ImprovedHero({
   subtitle,
   children,
   backgroundGradient = "from-green-600 via-emerald-600 to-teal-600",
-  height = "min-h-[85vh]",
+  height = "min-h-[52vh]",
   showFloatingElements = true,
   showBackgroundPattern = true
 }: ImprovedHeroProps) {
@@ -154,7 +154,7 @@ export default function ImprovedHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-2"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
             <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
@@ -169,7 +169,7 @@ export default function ImprovedHero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight"
         >
           {title}
         </motion.h1>
@@ -180,7 +180,7 @@ export default function ImprovedHero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="text-lg md:text-xl lg:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-sm md:text-base lg:text-lg text-white/80 mb-4 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
           </motion.p>

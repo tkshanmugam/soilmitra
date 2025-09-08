@@ -194,7 +194,7 @@ export default function HerbsPage() {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
       {/* Hero Section */}
       <motion.div 
-        className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-20"
+        className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-26"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}

@@ -103,7 +103,7 @@ export default function ChatPage() {
         title="Chat with SoilMitra"
         subtitle="Ask me about organic farming, fertilizer schedules, or soil health. I'm here to help you succeed in your agricultural journey."
         backgroundGradient="from-green-600 via-emerald-600 to-teal-600"
-        height="min-h-[60vh]"
+        height="min-h-[47vh]"
       />
 
       {/* Chat Interface */}

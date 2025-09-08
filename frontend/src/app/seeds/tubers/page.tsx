@@ -239,7 +239,7 @@ export default function TubersPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50">
       {/* Hero Section */}
       <motion.div 
-        className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-yellow-600 text-white py-20"
+        className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-yellow-600 text-white py-26"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
