@@ -26,33 +26,47 @@ export default function AboutPage() {
         backgroundGradient="from-emerald-600 via-green-600 to-teal-600"
       />
 
-      {/* Mission Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
+      {/* About Us Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-50 via-white to-emerald-50 relative overflow-hidden">
+        {/* Background Glass Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-emerald-200/40 to-green-200/40 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-teal-200/40 to-emerald-200/40 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <AnimatedText 
+              className="text-4xl font-bold text-gray-900 mb-4"
+              type="word"
+              stagger={0.1}
+            >
+              About SoilMitra
+            </AnimatedText>
+            <AnimatedText 
+              className="text-lg text-gray-600 max-w-4xl mx-auto"
+              delay={0.3}
+            >
+              Discover our story, mission, and commitment to revolutionizing agriculture through sustainable practices and innovative solutions.
+            </AnimatedText>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="left">
-              <div>
-                <AnimatedText 
-                  className="text-3xl font-bold text-gray-900 mb-6"
-                  type="word"
-                  stagger={0.1}
-                >
-                  Our Mission
-                </AnimatedText>
-                <AnimatedText 
-                  className="text-lg text-gray-700 leading-relaxed mb-6"
-                  delay={0.2}
-                >
-                  SoilMitra is dedicated to empowering farmers with AI-driven insights and organic farming solutions. We believe that sustainable agriculture is the key to feeding our growing population while preserving our planet.
-                </AnimatedText>
-                <AnimatedText 
-                  className="text-lg text-gray-700 leading-relaxed"
-                  delay={0.4}
-                >
-                  Our platform combines cutting-edge technology with traditional farming wisdom to create a comprehensive solution for modern agricultural challenges.
-                </AnimatedText>
-              </div>
+              <AnimatedCard className="p-8 rounded-3xl bg-white/40 backdrop-blur-md shadow-2xl border border-white/30 hover:bg-white/50 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="text-4xl">🌱</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">About Us</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      At SoilMitra, we believe that healthy soil is the foundation of healthy crops. Backed by the expertise of Sree Marudhan Agri Care Solutions, we are committed to delivering eco-friendly agri products and services that improve soil fertility, crop protection, and farmer prosperity.
+                    </p>
+                  </div>
+                </div>
+              </AnimatedCard>
             </AnimatedSection>
+            
             <AnimatedSection direction="right" delay={0.2}>
               <div className="relative">
                 <AnimatedCard className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-200">
@@ -72,6 +86,76 @@ export default function AboutPage() {
                 </AnimatedCard>
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <AnimatedText 
+              className="text-4xl font-bold text-gray-900 mb-4"
+              type="word"
+              stagger={0.1}
+            >
+              Why Choose Us?
+            </AnimatedText>
+            <AnimatedText 
+              className="text-lg text-gray-600 max-w-2xl mx-auto"
+              delay={0.3}
+            >
+              Discover what makes SoilMitra the trusted choice for farmers
+            </AnimatedText>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <AnimatedCard className="p-8 rounded-3xl bg-white/40 backdrop-blur-md shadow-2xl border border-white/30 hover:bg-white/50 transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">🤝</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Advantages</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span className="text-gray-700">Trusted expertise of Sree Marudhan Agri Care Solutions</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span className="text-gray-700">High-quality organic and sustainable farming products</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span className="text-gray-700">Focus on soil health improvement and farmer growth</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span className="text-gray-700">Reliable partner for modern and eco-friendly agriculture</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-emerald-50/60 to-green-50/60 backdrop-blur-md shadow-2xl border border-emerald-200/30 hover:from-emerald-50/80 hover:to-green-50/80 transition-all duration-300" delay={0.2}>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🌟</div>
+                <h3 className="text-2xl font-bold text-emerald-900 mb-6">Our Commitment</h3>
+                <p className="text-emerald-800 leading-relaxed mb-6">
+                  We are committed to providing farmers with the best organic solutions, expert guidance, and innovative technologies to ensure their success and the sustainability of our agricultural future.
+                </p>
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div className="p-3 rounded-2xl bg-white/40 backdrop-blur-sm border border-white/30">
+                    <div className="text-2xl font-bold text-emerald-600">100%</div>
+                    <div className="text-sm text-emerald-700">Organic</div>
+                  </div>
+                  <div className="p-3 rounded-2xl bg-white/40 backdrop-blur-sm border border-white/30">
+                    <div className="text-2xl font-bold text-emerald-600">24/7</div>
+                    <div className="text-sm text-emerald-700">Support</div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>

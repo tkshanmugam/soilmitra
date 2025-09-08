@@ -147,21 +147,9 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left Column - Company Story & Values */}
             <div className="space-y-8">
-              {/* About Us */}
-              <AnimatedCard className="p-8 rounded-3xl bg-white/40 backdrop-blur-md shadow-2xl border border-white/30 hover:bg-white/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">🌱</div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">About Us</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      At SoilMitra, we believe that healthy soil is the foundation of healthy crops. Backed by the expertise of Sree Marudhan Agri Care Solutions, we are committed to delivering eco-friendly agri products and services that improve soil fertility, crop protection, and farmer prosperity.
-                    </p>
-                  </div>
-                </div>
-              </AnimatedCard>
 
               {/* Our Legacy */}
-              <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-amber-50/60 to-orange-50/60 backdrop-blur-md shadow-2xl border border-amber-200/30 hover:from-amber-50/80 hover:to-orange-50/80 transition-all duration-300" delay={0.2}>
+              <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-amber-50/60 to-orange-50/60 backdrop-blur-md shadow-2xl border border-amber-200/30 hover:from-amber-50/80 hover:to-orange-50/80 transition-all duration-300">
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">🌟</div>
                   <div>
@@ -177,7 +165,7 @@ export default function HomePage() {
               </AnimatedCard>
 
               {/* Founder's Message */}
-              <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-purple-50/60 to-pink-50/60 backdrop-blur-md shadow-2xl border border-purple-200/30 hover:from-purple-50/80 hover:to-pink-50/80 transition-all duration-300" delay={0.4}>
+              <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-purple-50/60 to-pink-50/60 backdrop-blur-md shadow-2xl border border-purple-200/30 hover:from-purple-50/80 hover:to-pink-50/80 transition-all duration-300" delay={0.2}>
                 <div className="text-center">
                   <div className="text-4xl mb-4">🌟</div>
                   <h3 className="text-2xl font-bold text-purple-900 mb-6">Message from the Founder</h3>
@@ -190,18 +178,6 @@ export default function HomePage() {
                 </div>
               </AnimatedCard>
 
-              {/* Our Mission */}
-              <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-cyan-50/60 to-blue-50/60 backdrop-blur-md shadow-2xl border border-cyan-200/30 hover:from-cyan-50/80 hover:to-blue-50/80 transition-all duration-300" delay={0.6}>
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">🌍</div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-cyan-900 mb-4">Our Mission</h3>
-                    <p className="text-cyan-800 leading-relaxed">
-                      To empower farmers with organic solutions, crop care expertise, and soil-friendly practices, creating a future where farming is both productive and sustainable.
-                    </p>
-                  </div>
-                </div>
-              </AnimatedCard>
             </div>
 
             {/* Right Column - Services & Contact */}
@@ -258,55 +234,7 @@ export default function HomePage() {
                 </div>
               </AnimatedCard>
 
-              {/* Why Choose Us */}
-              <AnimatedCard className="p-8 rounded-3xl bg-white/40 backdrop-blur-md shadow-2xl border border-white/30 hover:bg-white/50 transition-all duration-300" delay={0.3}>
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">🤝</div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us?</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                        <span className="text-gray-700">Trusted expertise of Sree Marudhan Agri Care Solutions</span>
-                      </div>
-                      <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                        <span className="text-gray-700">High-quality organic and sustainable farming products</span>
-                      </div>
-                      <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                        <span className="text-gray-700">Focus on soil health improvement and farmer growth</span>
-                      </div>
-                      <div className="flex items-center space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                        <span className="text-gray-700">Reliable partner for modern and eco-friendly agriculture</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AnimatedCard>
 
-              {/* Contact Info */}
-              <AnimatedCard className="p-8 rounded-3xl bg-gradient-to-br from-green-50/60 to-emerald-50/60 backdrop-blur-md shadow-2xl border border-green-200/30 hover:from-green-50/80 hover:to-emerald-50/80 transition-all duration-300" delay={0.5}>
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-green-900 mb-4">Get in Touch</h3>
-                  <p className="text-green-800 mb-6">
-                    Join the SoilMitra community today and explore the wide range of organic fertilizers, bio-inputs, soil testing, and agri solutions from Sree Marudhan Agri Care Solutions. Together, let's build healthier soil, stronger crops, and a brighter farming future.
-                  </p>
-                  <div className="flex flex-col gap-4">
-                    <a 
-                      href="https://wa.me/918072897988" 
-                      className="flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    >
-                      <span className="text-xl">📱</span>
-                      <span>Contact Us on WhatsApp: 8072897988</span>
-                    </a>
-                    <div className="text-green-700 p-3 rounded-2xl bg-white/40 backdrop-blur-sm border border-white/30">
-                      <span className="font-semibold">👤 Founder: K. S. Thilakkumar, M.C.A</span>
-                    </div>
-                  </div>
-                </div>
-              </AnimatedCard>
             </div>
           </div>
         </div>
