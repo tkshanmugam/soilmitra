@@ -97,14 +97,48 @@ export default function HomePage() {
                 type="word"
                 stagger={0.1}
               >
-                SoilMitra – Powered by Sree Marudhan Agri Care Solutions
+                SoilMitra – Where Tradition Meets Modern Farming Solutions
               </AnimatedText>
+              <div className="flex items-center justify-center mb-6">
+                <div className="text-2xl">🌿</div>
+                <div className="mx-4 text-lg font-semibold text-green-700">Where Tradition Meets Modern Farming Solutions</div>
+                <div className="text-2xl">🌿</div>
+              </div>
               <AnimatedText 
                 className="text-lg text-gray-600 max-w-4xl mx-auto"
                 delay={0.3}
               >
-                Welcome to SoilMitra, the official online platform of Sree Marudhan Agri Care Solutions.
-                We specialize in organic fertilizers, soil health solutions, and sustainable farming practices that help farmers improve crop yield, protect the environment, and achieve long-term success.
+                Welcome to SoilMitra, the official online platform of{" "}
+                <span className="font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 bg-clip-text text-transparent relative">
+                  Sree Marudhan Agri Care Solutions
+                  <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400/20 via-green-400/20 to-teal-400/20 rounded-lg blur-sm -z-10"></div>
+                </span>
+                .
+                <br className="mt-2" />
+                Carrying forward a proud family legacy and embracing modern innovations, we provide farmers with high-quality seeds, trusted fertilizers, and soil health solutions.
+                <br className="mt-4" />
+                <div className="bg-gradient-to-r from-emerald-50/80 to-green-50/80 backdrop-blur-sm rounded-2xl p-4 border border-emerald-200/30 shadow-lg">
+                  <div className="flex items-center justify-center mb-2">
+                    <span className="text-2xl mr-2">🎯</span>
+                    <span className="text-lg font-bold text-emerald-800">Our Goal</span>
+                  </div>
+                  <p className="text-emerald-700 font-medium text-center leading-relaxed">
+                    To help farmers improve yields, protect the environment, and secure sustainable growth for generations to come.
+                  </p>
+                </div>
+                <br className="mt-4" />
+                <div className="flex items-center justify-center mt-4">
+                  <span className="text-2xl mr-2">📱</span>
+                  <span className="text-gray-700 font-medium">
+                    For quick support and orders, reach us on WhatsApp:{" "}
+                    <a 
+                      href="https://wa.me/918072897988" 
+                      className="text-green-600 hover:text-green-700 font-semibold underline decoration-2 underline-offset-2 hover:decoration-green-500 transition-all duration-300"
+                    >
+                      8072897988
+                    </a>
+                  </span>
+                </div>
               </AnimatedText>
             </div>
           </div>
@@ -182,8 +216,8 @@ export default function HomePage() {
                       <div className="flex items-start space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
                         <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="font-semibold text-gray-900">Organic Fertilizers & Bio-Inputs</h4>
-                          <p className="text-gray-600 text-sm">Natural products designed to boost soil health and increase productivity.</p>
+                          <h4 className="font-semibold text-gray-900">Seeds & Organic Fertilizers</h4>
+                          <p className="text-gray-600 text-sm">High-quality seeds and natural products designed to boost soil health and crop productivity.</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
@@ -191,13 +225,6 @@ export default function HomePage() {
                         <div>
                           <h4 className="font-semibold text-gray-900">Soil Testing & Analysis</h4>
                           <p className="text-gray-600 text-sm">Accurate soil reports to guide proper nutrient management.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Crop Care & Protection</h4>
-                          <p className="text-gray-600 text-sm">Environmentally safe solutions for protecting crops from pests and diseases.</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3 p-3 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/20">
@@ -212,6 +239,18 @@ export default function HomePage() {
                         <div>
                           <h4 className="font-semibold text-gray-900">Knowledge Hub</h4>
                           <p className="text-gray-600 text-sm">Access to valuable resources, tips, and best practices for organic farming.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Future Products Notice */}
+                    <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-blue-50/60 to-indigo-50/60 backdrop-blur-sm border border-blue-200/30">
+                      <div className="flex items-start space-x-3">
+                        <div className="text-2xl">✨</div>
+                        <div>
+                          <p className="text-blue-800 text-sm leading-relaxed">
+                            <span className="font-semibold">Currently, we provide seeds and fertilizers, while additional solutions like laterals and irrigation products will be introduced soon.</span> Stay connected with SoilMitra for updates.
+                          </p>
                         </div>
                       </div>
                     </div>
