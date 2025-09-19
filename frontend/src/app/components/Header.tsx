@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
   const { t, locale, setLocale, mounted } = useLanguage();
   const pathname = usePathname();
 
@@ -33,10 +32,6 @@ export default function Header() {
     { href: "/chat", label: mounted ? t("navigation.chat") : "Chats", icon: "💬" },
   ];
 
-  const productSubPages = [
-    { href: "/product", label: "Organic Fertilizer", icon: "🌱" },
-    { href: "/seeds", label: "Native Seeds", icon: "🌿" },
-  ];
 
   const handleLanguageChange = (newLocale: 'en' | 'ta') => {
     setLocale(newLocale);
@@ -114,66 +109,10 @@ export default function Header() {
                   transition={{ delay: index * 0.1 }}
                   className="relative"
                 >
-                  {item.href === "/product" ? (
-                    <div className="relative">
-                      <button
-                        onMouseEnter={() => setIsProductMenuOpen(true)}
-                        onMouseLeave={() => setIsProductMenuOpen(false)}
-                        className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 group ${
-                          pathname === item.href || pathname.startsWith("/seeds")
-                            ? `${activeColor} ${activeBg} border ${activeBorder}`
-                            : `${textColor} ${hoverColor} hover:bg-gray-50`
-                        }`}
-                      >
-                        <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                          {item.icon}
-                        </span>
-                        <span className="font-semibold">{item.label}</span>
-                        <motion.span
-                          className="text-xs transition-transform duration-200"
-                          animate={{ rotate: isProductMenuOpen ? 180 : 0 }}
-                        >
-                          ▼
-                        </motion.span>
-                      </button>
-
-                      {/* Product Dropdown */}
-                      <AnimatePresence>
-                        {isProductMenuOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-200/50 backdrop-blur-md"
-                            onMouseEnter={() => setIsProductMenuOpen(true)}
-                            onMouseLeave={() => setIsProductMenuOpen(false)}
-                          >
-                            <div className="p-2">
-                              {productSubPages.map((subItem) => (
-                                <Link
-                                  key={subItem.href}
-                                  href={subItem.href}
-                                  className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-emerald-50 transition-all duration-200 group"
-                                >
-                                  <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                                    {subItem.icon}
-                                  </span>
-                                  <span className="font-medium text-gray-700 group-hover:text-emerald-600">
-                                    {subItem.label}
-                                  </span>
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
                     <Link
                       href={item.href}
                       className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 group relative ${
-                        pathname === item.href
+                        pathname === item.href || (item.href === "/product" && (pathname.startsWith("/seeds") || pathname.startsWith("/bio-fertilizers")))
                           ? `${activeColor} ${activeBg} border ${activeBorder}`
                           : `${textColor} ${hoverColor} hover:bg-gray-50`
                       }`}
@@ -195,7 +134,6 @@ export default function Header() {
                         />
                       )}
                     </Link>
-                  )}
                 </motion.div>
               ))}
             </nav>
@@ -257,45 +195,19 @@ export default function Header() {
           >
             <div className="px-4 py-6 space-y-4">
               {nav.map((item) => (
-                <div key={item.href}>
-                  {item.href === "/product" ? (
-                    <div>
-                      <div className="flex items-center justify-between px-4 py-3 text-gray-700 font-medium">
-                        <span className="flex items-center space-x-3">
-                          <span className="text-lg">{item.icon}</span>
-                          <span>{item.label}</span>
-                        </span>
-                        <span className="text-xs">▼</span>
-                      </div>
-                      <div className="ml-8 space-y-2">
-                        {productSubPages.map((subItem) => (
-                          <Link
-                            key={subItem.href}
-                            href={subItem.href}
-                            className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            <span className="text-lg">{subItem.icon}</span>
-                            <span>{subItem.label}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
-                        pathname === item.href
-                          ? `${activeColor} ${activeBg} border ${activeBorder}`
-                          : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
-                      }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span className="text-lg">{item.icon}</span>
-                      <span className="font-medium">{item.label}</span>
-                    </Link>
-                  )}
-                </div>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                    pathname === item.href || (item.href === "/product" && (pathname.startsWith("/seeds") || pathname.startsWith("/bio-fertilizers")))
+                      ? `${activeColor} ${activeBg} border ${activeBorder}`
+                      : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span className="text-lg">{item.icon}</span>
+                  <span className="font-medium">{item.label}</span>
+                </Link>
               ))}
             </div>
           </motion.div>

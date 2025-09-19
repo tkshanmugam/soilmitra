@@ -210,12 +210,24 @@ export default function SeedsPage() {
             Choose from our extensive collection of native seeds and begin your organic farming journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg">
-              Browse Seeds
-            </button>
-            <button className="px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/50 hover:bg-white/10 transition-all duration-300">
-              Get Expert Advice
-            </button>
+            <a 
+              href="https://wa.me/918072897988?text=Hi, I'm interested in buying native seeds. Please provide information about available varieties, pricing, and delivery options."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-0.5 text-center flex items-center justify-center space-x-2"
+            >
+              <span className="text-xl">📱</span>
+              <span>WhatsApp Order / வாட்ஸ்அப் ஆர்டர்</span>
+            </a>
+            <a 
+              href="https://wa.me/918072897988?text=Hi, I need expert advice about native seeds and farming. Please help me with guidance on seed selection and growing techniques."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/30 hover:border-white/50 transition-all duration-300 text-center flex items-center justify-center space-x-2"
+            >
+              <span className="text-xl">🌱</span>
+              <span>Expert Advice / நிபுணர் ஆலோசனை</span>
+            </a>
           </div>
         </div>
       </section>

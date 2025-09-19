@@ -1,7 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .database import Base, engine
-from .routes import pages, contact, chat, admin
+from database import Base, engine
+from routes import chat, admin
 
 app = FastAPI()
 
@@ -19,8 +23,6 @@ app.add_middleware(
 
 Base.metadata.create_all(bind=engine)
 
-app.include_router(pages.router)
-app.include_router(contact.router)
 app.include_router(chat.router)
 app.include_router(admin.router)
 

@@ -332,16 +332,24 @@ export default function ChilliVarietiesPage() {
                         {variety.currentPrice}
                       </div>
                     </div>
-                    <button 
-                      className={`px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
-                        variety.stockStatus === "Out of Stock" 
-                          ? "bg-gray-400 text-gray-600 cursor-not-allowed" 
-                          : "bg-orange-600 text-white hover:bg-orange-700"
-                      }`}
-                      disabled={variety.stockStatus === "Out of Stock"}
-                    >
-                      {variety.stockStatus === "Out of Stock" ? "Out of Stock" : "Add to Cart"}
-                    </button>
+                    {variety.stockStatus === "Out of Stock" ? (
+                      <button 
+                        className="px-4 py-2 rounded-lg font-medium transition-colors duration-300 bg-gray-400 text-gray-600 cursor-not-allowed"
+                        disabled
+                      >
+                        Out of Stock
+                      </button>
+                    ) : (
+                      <a 
+                        href={`https://wa.me/918072897988?text=Hi, I'm interested in buying ${variety.englishName} (${variety.tamilName}) chilli seeds. Price: ${variety.currentPrice}. Please provide more details about availability and delivery.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 font-medium text-center block shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center justify-center space-x-1 text-sm"
+                      >
+                        <span>📱</span>
+                        <span>Buy Now / இப்போது வாங்க</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

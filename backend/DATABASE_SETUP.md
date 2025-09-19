@@ -106,29 +106,24 @@ DEBUG=True
 
 ## Step 5: Initialize Database
 
-1. Run the database initialization script:
+The database tables will be created automatically when you start the FastAPI server. The application will create the necessary tables for:
+- Users (admin authentication)
+- Audit logs (admin actions)
+- Chat messages (conversation history)
+
+## Step 6: Create Admin User
+
+1. Start the server first:
 ```bash
-python init_db.py
+uvicorn main:app --reload
 ```
 
-This script will:
-- Test the database connection
-- Create all necessary tables
-- Verify the setup
-
-## Step 6: Seed Sample Data
-
-1. Run the data seeding script:
+2. Use the admin registration endpoint to create an admin user:
 ```bash
-python seed_data.py
+curl -X POST "http://localhost:8000/api/admin/register" \
+     -H "Content-Type: application/json" \
+     -d '{"username": "admin", "password": "admin123"}'
 ```
-
-This will create:
-- Sample pages
-- Admin user (username: `admin`, password: `admin123`)
-- Sample contact messages
-- Sample audit logs
-- Sample chat messages
 
 **Important:** Change the default admin password in production!
 
@@ -143,14 +138,16 @@ uvicorn main:app --reload
 
 ## Step 8: Verify Setup
 
-1. Check the database tables:
+1. Test the health endpoint:
 ```bash
-python init_db.py
+curl http://localhost:8000/health
 ```
 
-2. Check the sample data:
+2. Test the admin registration:
 ```bash
-python seed_data.py
+curl -X POST "http://localhost:8000/api/admin/register" \
+     -H "Content-Type: application/json" \
+     -d '{"username": "admin", "password": "admin123"}'
 ```
 
 ## Troubleshooting
@@ -228,7 +225,8 @@ After successful setup:
 1. Explore the API endpoints at `/docs`
 2. Test the authentication system
 3. Try the AI chat features
-4. Customize the sample data for your needs
+4. Upload PDFs for RAG functionality
+5. Monitor chat sessions and audit logs
 
 ## Support
 

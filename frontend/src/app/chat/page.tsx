@@ -12,7 +12,7 @@ interface Message {
 }
 
 export default function ChatPage() {
-  const { t, language, mounted } = useLanguage();
+  const { t, locale, mounted } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -50,7 +50,7 @@ export default function ChatPage() {
         body: JSON.stringify({
           message: inputText,
           session_id: sessionId,
-          language: language,
+          language: locale,
         }),
       });
 

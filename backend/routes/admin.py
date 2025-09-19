@@ -4,14 +4,14 @@ from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from ..database import SessionLocal
-from ..models import User, Page, AuditLog, ChatMessage
-from ..schemas import AdminLogin, TokenResponse, PageOut, PageBase, AuditLogOut, ChatMessageOut
+from database import SessionLocal
+from models import User, AuditLog, ChatMessage
+from schemas import AdminLogin, TokenResponse, AuditLogOut, ChatMessageOut, UserCreate
 import os
 import shutil
 from pathlib import Path
 from sqlalchemy import func
-from ..rag_service import rag_service
+from rag_service import rag_service
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "soilmitrasecret")
 ALGORITHM = "HS256"
@@ -72,6 +72,27 @@ def log_action(db: Session, admin_username: str, action: str, target: str = None
     db.add(log)
     db.commit()
 
+@router.post("/register", response_model=TokenResponse)
+def register(user_data: UserCreate, db: Session = Depends(get_db)):
+    # Check if user already exists
+    existing_user = db.query(User).filter(User.username == user_data.username).first()
+    if existing_user:
+        raise HTTPException(status_code=400, detail="Username already registered")
+    
+    # Hash password and create user
+    hashed_password = pwd_context.hash(user_data.password)
+    user = User(username=user_data.username, password=hashed_password)
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    
+    # Log the registration
+    log_action(db, user.username, "register", details="Admin user registered")
+    
+    # Return token
+    access_token = create_access_token(data={"sub": user.username})
+    return {"access_token": access_token, "token_type": "bearer"}
+
 @router.post("/login", response_model=TokenResponse)
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     user = authenticate_user(db, form_data.username, form_data.password)
@@ -85,49 +106,6 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
 def get_audit_logs(db: Session = Depends(get_db)):
     return db.query(AuditLog).order_by(AuditLog.timestamp.desc()).all()
 
-# Admin CRUD for pages
-@router.get("/pages/{slug}", response_model=PageOut, dependencies=[Depends(get_current_admin)])
-def admin_get_page(slug: str, db: Session = Depends(get_db), current_admin: User = Depends(get_current_admin)):
-    page = db.query(Page).filter(Page.slug == slug).first()
-    if not page:
-        raise HTTPException(status_code=404, detail="Page not found")
-    log_action(db, current_admin.username, "get_page", target=slug)
-    return page
-
-@router.put("/pages/{slug}", response_model=PageOut, dependencies=[Depends(get_current_admin)])
-def admin_update_page(slug: str, page_in: PageBase, db: Session = Depends(get_db), current_admin: User = Depends(get_current_admin)):
-    page = db.query(Page).filter(Page.slug == slug).first()
-    if not page:
-        raise HTTPException(status_code=404, detail="Page not found")
-    page.title = page_in.title
-    page.content = page_in.content
-    page.updated_at = datetime.utcnow()
-    db.commit()
-    db.refresh(page)
-    log_action(db, current_admin.username, "update_page", target=slug, details=f"Title: {page.title}")
-    return page
-
-@router.post("/pages", response_model=PageOut, dependencies=[Depends(get_current_admin)])
-def admin_create_page(page_in: PageBase, db: Session = Depends(get_db), current_admin: User = Depends(get_current_admin)):
-    exists = db.query(Page).filter(Page.slug == page_in.slug).first()
-    if exists:
-        raise HTTPException(status_code=400, detail="Slug already exists")
-    page = Page(**page_in.dict())
-    db.add(page)
-    db.commit()
-    db.refresh(page)
-    log_action(db, current_admin.username, "create_page", target=page.slug, details=f"Title: {page.title}")
-    return page
-
-@router.delete("/pages/{slug}", status_code=204, dependencies=[Depends(get_current_admin)])
-def admin_delete_page(slug: str, db: Session = Depends(get_db), current_admin: User = Depends(get_current_admin)):
-    page = db.query(Page).filter(Page.slug == slug).first()
-    if not page:
-        raise HTTPException(status_code=404, detail="Page not found")
-    db.delete(page)
-    db.commit()
-    log_action(db, current_admin.username, "delete_page", target=slug)
-    return None
 
 @router.get("/chat-sessions", dependencies=[Depends(get_current_admin)])
 def list_chat_sessions(db: Session = Depends(get_db)):

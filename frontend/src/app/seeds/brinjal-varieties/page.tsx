@@ -372,9 +372,15 @@ export default function BrinjalVarietiesPage() {
                         {variety.currentPrice}
                       </div>
                     </div>
-                    <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300 font-medium">
-                      Add to Cart
-                    </button>
+                    <a 
+                      href={`https://wa.me/918072897988?text=Hi, I'm interested in buying ${variety.englishName} (${variety.tamilName}) brinjal seeds. Price: ${variety.currentPrice}. Please provide more details about availability and delivery.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 font-medium text-center block shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center justify-center space-x-1 text-sm"
+                    >
+                      <span>📱</span>
+                      <span>Buy Now / இப்போது வாங்க</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -444,13 +450,15 @@ export default function BrinjalVarietiesPage() {
               Our AI farming assistant can provide personalized advice for your brinjal garden
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/chat"
-                className="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-300"
+              <a 
+                href="https://wa.me/918072897988?text=Hi, I'm interested in buying brinjal seeds. Please provide information about available varieties, pricing, and delivery options."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                <span className="mr-2">💬</span>
-                AI உதவியாளருடன் பேசுங்கள் / Chat with AI Assistant
-              </Link>
+                <span className="mr-2 text-lg">📱</span>
+                <span>WhatsApp Order / வாட்ஸ்அப் ஆர்டர்</span>
+              </a>
               <Link 
                 href="/seeds"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors duration-300"

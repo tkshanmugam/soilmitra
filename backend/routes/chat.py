@@ -3,10 +3,10 @@ from pydantic import BaseModel
 import os
 import openai
 from sqlalchemy.orm import Session
-from ..database import SessionLocal
-from ..models import ChatMessage
-from ..schemas import ChatMessageOut
-from ..rag_service import rag_service
+from database import SessionLocal
+from models import ChatMessage
+from schemas import ChatMessageOut
+from rag_service import rag_service
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
