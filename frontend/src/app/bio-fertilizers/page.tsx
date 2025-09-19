@@ -1,10 +1,15 @@
 'use client';
 
-import React from 'react';
-import AnimatedSection from '@/app/components/AnimatedSection';
-import AnimatedCard from '@/app/components/AnimatedCard';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const BioFertilizerProducts = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const products = [
     {
       id: 1,
@@ -14,14 +19,7 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "12 வகையான ஊட்டச்சத்துக்களுடன் கடல்பாசி அடிப்படையிலான இயற்கை உரம்",
       price: "₹11,000",
       quantity: "50 kg",
-      originalPrice: "₹11,000",
-      currentPrice: "₹11,000",
-      discount: "0%",
-      packaging: [
-        "50 kg - ₹11,000",
-        "10 kg bucket - ₹2,200", 
-        "1 kg - ₹300"
-      ],
+      packaging: ["50 kg - ₹11,000", "10 kg bucket - ₹2,200", "1 kg - ₹300"],
       benefits: [
         "Contains 12 types of essential nutrients",
         "Balances soil pH and increases earthworm population",
@@ -49,13 +47,7 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "pH நிலைப்படுத்தல் மற்றும் வேர் வளர்ச்சி மேம்பாட்டுக்கான மண் நிலைப்படுத்தி",
       price: "₹1,000",
       quantity: "1 kg",
-      originalPrice: "₹1,000",
-      currentPrice: "₹1,000",
-      discount: "0%",
-      packaging: [
-        "1 kg - ₹1,000",
-        "½ kg - ₹500"
-      ],
+      packaging: ["1 kg - ₹1,000", "½ kg - ₹500"],
       benefits: [
         "Stabilizes soil pH (acid-alkaline balance)",
         "Contains humic acid, fulvic acid, and potash",
@@ -83,13 +75,7 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "மேம்பட்ட பூத்தல் மற்றும் கனிதருவதற்கான போரான் குறைபாடு சரிசெய்தல்",
       price: "₹1,000",
       quantity: "1 kg",
-      originalPrice: "₹1,000",
-      currentPrice: "₹1,000",
-      discount: "0%",
-      packaging: [
-        "1 kg - ₹1,000",
-        "½ kg - ₹500"
-      ],
+      packaging: ["1 kg - ₹1,000", "½ kg - ₹500"],
       benefits: [
         "Corrects boron deficiency in crops",
         "Increases number of female flowers",
@@ -117,9 +103,6 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "மேம்பட்ட பயிர் விளைச்சலுக்கான விரிவான நுண்ணூட்டச்சத்து தீர்வு",
       price: "₹1,300",
       quantity: "10 kg",
-      originalPrice: "₹1,300",
-      currentPrice: "₹1,300",
-      discount: "0%",
       benefits: [
         "Addresses micronutrient deficiencies in coconut and other crops",
         "Enhances nutrient uptake by crops",
@@ -147,9 +130,6 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "மேம்பட்ட உற்பத்தித்திறனுக்கான மேம்பட்ட பயிர் மேலாண்மை தீர்வு",
       price: "₹600",
       quantity: "10 kg",
-      originalPrice: "₹600",
-      currentPrice: "₹600",
-      discount: "0%",
       benefits: [
         "Advanced crop management system",
         "Enhances overall plant health",
@@ -177,9 +157,6 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "வேர் மற்றும் தண்டு ஆரோக்கியத்திற்கான நன்மை பயக்கும் பாக்டீரியா",
       price: "₹300",
       quantity: "1 kg",
-      originalPrice: "₹300",
-      currentPrice: "₹300",
-      discount: "0%",
       benefits: [
         "Helps control coconut root wilt disease",
         "Effective against stem rot and neck rot diseases",
@@ -207,13 +184,7 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "ஆரம்ப தாவர வளர்ச்சிக்கு அவசியம் மற்றும் வேர் உறிஞ்சுதல் அதிகரிப்பு",
       price: "₹1,200",
       quantity: "10 lit",
-      originalPrice: "₹1,200",
-      currentPrice: "₹1,200",
-      discount: "0%",
-      packaging: [
-        "10 lit - ₹1,200",
-        "5 lit - ₹600"
-      ],
+      packaging: ["10 lit - ₹1,200", "5 lit - ₹600"],
       benefits: [
         "Increases root absorption by 20-30% for higher yields",
         "Contains essential micronutrients: Nitrogen, Phosphorus, Potassium",
@@ -239,14 +210,7 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "மேம்பட்ட தாவர வளர்ச்சிக்கான சிறப்பு நுண்ணூட்டச்சத்து சூத்திரம்",
       price: "₹5,250",
       quantity: "10 lit",
-      originalPrice: "₹5,250",
-      currentPrice: "₹5,250",
-      discount: "0%",
-      packaging: [
-        "10L - ₹5,250",
-        "5L - ₹2,625",
-        "1L - ₹525"
-      ],
+      packaging: ["10L - ₹5,250", "5L - ₹2,625", "1L - ₹525"],
       benefits: [
         "Comprehensive micronutrient solution",
         "Enhances plant growth and development",
@@ -274,14 +238,7 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "தாவர சுவாசம் மற்றும் ஊட்டச்சத்து உறிஞ்சுதல் மேம்பாட்டுக்கான இலை தெளிப்பு",
       price: "₹500",
       quantity: "1 lit",
-      originalPrice: "₹500",
-      currentPrice: "₹500",
-      discount: "0%",
-      packaging: [
-        "1L - ₹500",
-        "5L - ₹2,500",
-        "¼L - ₹125"
-      ],
+      packaging: ["1L - ₹500", "5L - ₹2,500", "¼L - ₹125"],
       benefits: [
         "Improves plant respiration and ion exchange",
         "Aids in complete absorption of macro and micronutrients",
@@ -309,9 +266,6 @@ const BioFertilizerProducts = () => {
       descriptionTamil: "NPK மற்றும் அத்தியாவசிய ஊட்டச்சத்துக்களுடன் முழுமையான கரிம உரம்",
       price: "₹1,000",
       quantity: "50 kg",
-      originalPrice: "₹1,000",
-      currentPrice: "₹1,000",
-      discount: "0%",
       minimumOrder: "Minimum 10 bags required",
       minimumOrderTamil: "குறைந்தபட்சம் 10 பைகள் தேவை",
       benefits: [
@@ -335,260 +289,276 @@ const BioFertilizerProducts = () => {
     }
   ];
 
+  if (!mounted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-500"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container mx-auto px-4 py-12">
         {/* Header Section */}
-        <AnimatedSection>
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Bio Fertilizer Products
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-green-600 mb-6">
-              உயிர் உரம் தயாரிப்புகள்
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+            Bio Fertilizer Products
+          </h1>
+          <h2 className="text-3xl md:text-4xl font-semibold text-green-600 mb-8">
+            உயிர் உரம் தயாரிப்புகள்
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xl text-gray-600 mb-4">
               High-quality organic bio fertilizers for sustainable agriculture. 
               Enhance your crop yield with our premium range of natural fertilizers.
             </p>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-2">
+            <p className="text-xl text-gray-600">
               நிலையான விவசாயத்திற்கான உயர்தர கரிம உயிர் உரங்கள். 
               எங்கள் பிரீமியம் இயற்கை உரங்களின் வரம்புடன் உங்கள் பயிர் விளைச்சலை அதிகரிக்கவும்.
             </p>
           </div>
-        </AnimatedSection>
+        </div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <AnimatedCard key={product.id} delay={index * 0.2}>
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                {/* Product Image */}
-                <div className="h-64 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative overflow-hidden">
-                  <img 
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      // Fallback to placeholder if image fails to load
-                      e.currentTarget.style.display = 'none';
-                      const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (nextElement) {
-                        nextElement.style.display = 'flex';
-                      }
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center" style={{display: 'none'}}>
+          {products.map((product) => (
+            <div key={product.id} className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+              {/* Product Image */}
+              <div className="h-72 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  loading="lazy"
+                />
+                {/* Price Badge */}
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full shadow-lg">
+                  <span className="text-lg font-bold">{product.price}</span>
+                </div>
+              </div>
+
+              {/* Product Content */}
+              <div className="p-8">
+                {/* Product Name */}
+                <div className="mb-6 text-center">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {product.name}
+                  </h3>
+                  <h4 className="text-xl font-semibold text-green-600 mb-4">
+                    {product.nameTamil}
+                  </h4>
+                  <div className="w-16 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                {/* Quick Info Cards */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {/* Price Card */}
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border border-green-200">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <span className="text-white text-4xl font-bold">
-                          {product.name.charAt(0)}
-                        </span>
-                      </div>
-                      <h3 className="text-lg font-semibold text-gray-800 mb-2">{product.name}</h3>
-                      <p className="text-sm text-gray-600">Product Image Coming Soon</p>
-                      <div className="mt-4 flex flex-wrap justify-center gap-2">
-                        {product.crops.slice(0, 4).map((crop, idx) => (
-                          <span 
-                            key={idx}
-                            className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full"
-                          >
-                            {crop}
-                          </span>
-                        ))}
-                      </div>
+                      <p className="text-sm text-green-600 font-medium mb-1">Price / விலை</p>
+                      <p className="text-2xl font-bold text-green-700">{product.price}</p>
+                      <p className="text-sm text-green-600">/ {product.quantity}</p>
+                    </div>
+                  </div>
+
+                  {/* Quantity Card */}
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200">
+                    <div className="text-center">
+                      <p className="text-sm text-blue-600 font-medium mb-1">Available / கிடைக்கும்</p>
+                      <p className="text-lg font-bold text-blue-700">{product.quantity}</p>
+                      {product.minimumOrder && (
+                        <p className="text-xs text-blue-600 mt-1">Min: 10 bags</p>
+                      )}
                     </div>
                   </div>
                 </div>
 
-                {/* Product Content */}
-                <div className="p-6">
-                  {/* Product Name */}
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">
-                      {product.name}
-                    </h3>
-                    <h4 className="text-lg font-semibold text-green-600">
-                      {product.nameTamil}
-                    </h4>
-                  </div>
+                {/* Description */}
+                <div className="mb-6 p-4 bg-gray-50 rounded-xl">
+                  <p className="text-gray-700 text-base mb-2 font-medium">
+                    {product.description}
+                  </p>
+                  <p className="text-gray-600 text-base">
+                    {product.descriptionTamil}
+                  </p>
+                </div>
 
-                  {/* Price and Quantity */}
+                {/* Benefits - English and Tamil */}
+                <div className="mb-6">
+                  <h5 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <span className="mr-2 text-2xl">🌟</span>
+                    Benefits / நன்மைகள்
+                  </h5>
+                  
+                  {/* English Benefits */}
                   <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-2xl font-bold text-green-600">
-                          {product.price}
-                        </span>
-                        <span className="text-sm text-gray-500">
-                          / {product.quantity}
-                        </span>
-                      </div>
-                      {product.discount && product.discount !== "0%" && (
-                        <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-semibold">
-                          {product.discount}
-                        </span>
-                      )}
-                    </div>
-                    {product.minimumOrder && (
-                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2 mb-2">
-                        <p className="text-sm text-yellow-800 font-medium">
-                          {product.minimumOrder}
-                        </p>
-                        <p className="text-sm text-yellow-700">
-                          {product.minimumOrderTamil}
-                        </p>
-                      </div>
-                    )}
-                    {product.packaging && (
-                      <div className="mb-2">
-                        <h6 className="text-sm font-semibold text-gray-700 mb-1">Available Packings / கிடைக்கும் பேக்கேஜிங்:</h6>
-                        <div className="space-y-1">
-                          {product.packaging.map((pack, idx) => (
-                            <p key={idx} className="text-xs text-gray-600">
-                              {pack}
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Description */}
-                  <div className="mb-4">
-                    <p className="text-gray-600 text-sm mb-2">
-                      {product.description}
-                    </p>
-                    <p className="text-gray-600 text-sm">
-                      {product.descriptionTamil}
-                    </p>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="mb-4">
-                    <h5 className="font-semibold text-gray-800 mb-2">Benefits / நன்மைகள்:</h5>
-                    <ul className="space-y-1">
+                    <div className="space-y-2">
                       {product.benefits.map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>{benefit}</span>
-                        </li>
+                        <div key={idx} className="flex items-start bg-blue-50 p-3 rounded-lg">
+                          <span className="text-blue-500 mr-3 mt-1 text-lg">✓</span>
+                          <span className="text-blue-800 text-sm font-medium">{benefit}</span>
+                        </div>
                       ))}
-                    </ul>
-                    <ul className="space-y-1 mt-2">
-                      {product.benefitsTamil.map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    </div>
                   </div>
 
-                  {/* Usage Instructions */}
+                  {/* Tamil Benefits */}
                   <div className="mb-4">
-                    <h5 className="font-semibold text-gray-800 mb-2">Usage / பயன்பாடு:</h5>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <div className="space-y-2">
+                      {product.benefitsTamil.map((benefit, idx) => (
+                        <div key={idx} className="flex items-start bg-green-50 p-3 rounded-lg">
+                          <span className="text-green-500 mr-3 mt-1 text-lg">✓</span>
+                          <span className="text-green-800 text-sm font-medium">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Usage Instructions - English and Tamil */}
+                <div className="mb-6 p-4 bg-orange-50 rounded-xl border-l-4 border-orange-400">
+                  <h5 className="text-lg font-bold text-orange-800 mb-4 flex items-center">
+                    <span className="mr-2 text-xl">📋</span>
+                    Usage Instructions / பயன்பாடு வழிமுறைகள்
+                  </h5>
+                  
+                  {/* English Usage */}
+                  <div className="mb-3">
+                    <p className="text-orange-700 text-sm font-medium">
                       {product.usage}
                     </p>
-                    <p className="text-sm text-gray-600">
+                  </div>
+
+                  {/* Tamil Usage */}
+                  <div className="mb-3">
+                    <p className="text-orange-700 text-sm font-medium">
                       {product.usageTamil}
                     </p>
                   </div>
+                </div>
 
-                  {/* Suitable Crops */}
-                  <div className="mb-4">
-                    <h5 className="font-semibold text-gray-800 mb-2">Suitable Crops / ஏற்ற பயிர்கள்:</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {product.crops.map((crop, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full"
-                        >
-                          {crop}
-                        </span>
+                {/* Suitable Crops */}
+                <div className="mb-6">
+                  <h5 className="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                    <span className="mr-2 text-xl">🌱</span>
+                    Suitable Crops / ஏற்ற பயிர்கள்
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {product.crops.map((crop, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 text-sm font-medium rounded-full border border-purple-300"
+                      >
+                        {crop}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-600 mt-2 text-center">
+                    All listed crops are suitable for this product / பட்டியலிடப்பட்ட அனைத்து பயிர்களும் இந்த தயாரிப்புக்கு ஏற்றவை
+                  </p>
+                </div>
+
+                {/* Packaging Options */}
+                {product.packaging && (
+                  <div className="mb-6 p-4 bg-teal-50 rounded-xl border-l-4 border-teal-400">
+                    <h5 className="text-lg font-bold text-teal-800 mb-3 flex items-center">
+                      <span className="mr-2 text-xl">📦</span>
+                      Available Packings / கிடைக்கும் பேக்கேஜிங்
+                    </h5>
+                    <div className="space-y-2">
+                      {product.packaging.map((pack, idx) => (
+                        <div key={idx} className="bg-white p-3 rounded-lg border border-teal-200 shadow-sm">
+                          <p className="text-teal-700 text-sm font-medium text-center">{pack}</p>
+                        </div>
                       ))}
                     </div>
+                    <p className="text-sm text-teal-600 mt-2 text-center">
+                      Multiple packaging options available / பல பேக்கேஜிங் விருப்பங்கள் கிடைக்கும்
+                    </p>
                   </div>
+                )}
 
-                  {/* Action Button */}
-                  <a 
-                    href={`https://wa.me/918072897988?text=Hi, I'm interested in ${product.name} bio fertilizer. Please provide more details.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-2 px-4 rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 font-semibold text-center block"
-                  >
-                    Contact for Details / விவரங்களுக்கு தொடர்பு
-                  </a>
-                </div>
-              </div>
-            </AnimatedCard>
-          ))}
-        </div>
-
-        {/* Contact Section */}
-        <AnimatedSection>
-          <div className="mt-16 text-center">
-            <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Need More Information?
-              </h3>
-              <h4 className="text-xl font-semibold text-green-600 mb-6">
-                மேலும் தகவல் தேவையா?
-              </h4>
-              <p className="text-gray-600 mb-6">
-                Contact our agricultural experts for personalized advice on bio fertilizer usage 
-                and crop management strategies.
-              </p>
-              <p className="text-gray-600 mb-8">
-                உயிர் உரம் பயன்பாடு மற்றும் பயிர் மேலாண்மை உத்திகளில் தனிப்பட்ட ஆலோசனைக்கு 
-                எங்கள் விவசாய நிபுணர்களைத் தொடர்பு கொள்ளவும்.
-              </p>
-              
-              {/* Contact Information */}
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 mb-8">
-                <h5 className="text-lg font-semibold text-gray-800 mb-4">Contact Information / தொடர்பு தகவல்</h5>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                  <div>
-                    <p className="text-gray-700 font-medium mb-2">Phone (WhatsApp) / தொலைபேசி (வாட்ஸ்அப்):</p>
-                    <p className="text-green-600 font-semibold">+91 8072897988</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-700 font-medium mb-2">Email / மின்னஞ்சல்:</p>
-                    <p className="text-green-600 font-semibold">soilmitra2025@gmail.com</p>
-                  </div>
-                  <div className="md:col-span-2">
-                    <p className="text-gray-700 font-medium mb-2">Company / நிறுவனம்:</p>
-                    <p className="text-gray-600 font-semibold mb-2">Sree Marudhan Agro Care</p>
-                    <p className="text-gray-700 font-medium mb-2">Address / முகவரி:</p>
-                    <p className="text-gray-600">11, School Street, Kollukattuvalasu,<br />
-                    Vengambur (P.O), Unjalur (Via),<br />
-                    Erode Dist, Tamil Nadu - 638152</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {/* Action Button */}
                 <a 
-                  href="https://wa.me/918072897988?text=Hi, I'm interested in your bio fertilizer products. Please provide more information about pricing and availability."
+                  href={`https://wa.me/918072897988?text=Hi, I'm interested in ${product.name} bio fertilizer. Please provide more details.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-4 px-6 rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-300 font-bold text-lg text-center block shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
-                  Contact Us / எங்களைத் தொடர்பு கொள்ளுங்கள்
-                </a>
-                <a 
-                  href="https://wa.me/918072897988?text=Hi, I would like to download the bio fertilizer brochure. Please send me the details."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-green-500 text-green-500 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center"
-                >
-                  Download Brochure / பிரோஷர் பதிவிறக்கவும்
+                  Contact for Details / விவரங்களுக்கு தொடர்பு
                 </a>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Enhanced Contact Section */}
+        <div className="mt-20">
+          <div className="bg-gradient-to-r from-green-500 to-blue-500 rounded-3xl shadow-2xl p-12 text-white">
+            <div className="text-center mb-12">
+              <h3 className="text-4xl font-bold mb-4">
+                Need More Information?
+              </h3>
+              <h4 className="text-3xl font-semibold mb-8">
+                மேலும் தகவல் தேவையா?
+              </h4>
+              <p className="text-xl mb-6 max-w-3xl mx-auto">
+                Contact our agricultural experts for personalized advice on bio fertilizer usage 
+                and crop management strategies.
+              </p>
+              <p className="text-xl max-w-3xl mx-auto">
+                உயிர் உரம் பயன்பாடு மற்றும் பயிர் மேலாண்மை உத்திகளில் தனிப்பட்ட ஆலோசனைக்கு 
+                எங்கள் விவசாய நிபுணர்களைத் தொடர்பு கொள்ளவும்.
+              </p>
+            </div>
+            
+            {/* Contact Information Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div className="text-4xl mb-4">📞</div>
+                <h5 className="text-xl font-bold mb-2">Phone / தொலைபேசி</h5>
+                <p className="text-lg font-semibold">+91 8072897988</p>
+                <p className="text-sm opacity-90">WhatsApp Available</p>
+              </div>
+              
+              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div className="text-4xl mb-4">📧</div>
+                <h5 className="text-xl font-bold mb-2">Email / மின்னஞ்சல்</h5>
+                <p className="text-lg font-semibold">soilmitra2025@gmail.com</p>
+                <p className="text-sm opacity-90">24/7 Support</p>
+              </div>
+              
+              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div className="text-4xl mb-4">🏢</div>
+                <h5 className="text-xl font-bold mb-2">Company / நிறுவனம்</h5>
+                <p className="text-lg font-semibold">Sree Marudhan Agro Care</p>
+                <p className="text-sm opacity-90">Erode, Tamil Nadu</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <a 
+                href="https://wa.me/918072897988?text=Hi, I'm interested in your bio fertilizer products. Please provide more information about pricing and availability."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-green-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors font-bold text-xl text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Contact Us / எங்களைத் தொடர்பு கொள்ளுங்கள்
+              </a>
+              <a 
+                href="https://wa.me/918072897988?text=Hi, I would like to download the bio fertilizer brochure. Please send me the details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-green-600 transition-colors font-bold text-xl text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Download Brochure / பிரோஷர் பதிவிறக்கவும்
+              </a>
+            </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
     </div>
   );
