@@ -69,10 +69,10 @@ const BioFertilizerProducts = () => {
     },
     {
       id: 3,
-      name: "BORON",
-      nameTamil: "போரான்",
-      description: "Boron deficiency correction for enhanced flowering and fruiting",
-      descriptionTamil: "மேம்பட்ட பூத்தல் மற்றும் கனிதருவதற்கான போரான் குறைபாடு சரிசெய்தல்",
+      name: "BORON PLUS",
+      nameTamil: "போரான் பிளஸ்",
+      description: "Boron deficiency correction for enhanced flowering and fruiting - specifically for coconut and all crops",
+      descriptionTamil: "மேம்பட்ட பூத்தல் மற்றும் கனிதருவதற்கான போரான் குறைபாடு சரிசெய்தல் - குறிப்பாக தேங்காய் மற்றும் அனைத்து பயிர்களுக்கு",
       price: "₹1,000",
       quantity: "1 kg",
       packaging: ["1 kg - ₹1,000", "½ kg - ₹500"],
@@ -81,17 +81,21 @@ const BioFertilizerProducts = () => {
         "Increases number of female flowers",
         "Leads to significant increase in fruit count",
         "Improves fruit quality and size",
-        "Essential for proper pollination"
+        "Essential for proper pollination",
+        "Specifically beneficial for coconut trees",
+        "Can be used as foliar spray or soil application"
       ],
       benefitsTamil: [
         "பயிர்களில் போரான் குறைபாட்டை சரிசெய்கிறது",
         "பெண் பூக்களின் எண்ணிக்கையை அதிகரிக்கிறது",
         "கனி எண்ணிக்கையில் குறிப்பிடத்தக்க அதிகரிப்பு",
         "கனி தரம் மற்றும் அளவை மேம்படுத்துகிறது",
-        "சரியான மகரந்தச் சேர்க்கைக்கு அவசியம்"
+        "சரியான மகரந்தச் சேர்க்கைக்கு அவசியம்",
+        "குறிப்பாக தேங்காய் மரங்களுக்கு பயனுள்ளது",
+        "இலை தெளிப்பு அல்லது மண் பயன்பாடாக பயன்படுத்தலாம்"
       ],
-      usage: "1-2 kg per acre, 10-20 grams per coconut tree. Can be used as foliar spray (5-10 grams per liter of water).",
-      usageTamil: "ஏக்கருக்கு 1-2 கிலோ, ஒரு தேங்காய் மரத்திற்கு 10-20 கிராம். இலை தெளிப்பாக பயன்படுத்தலாம் (ஒரு லிட்டர் நீருக்கு 5-10 கிராம்).",
+      usage: "For coconut: 10-20 grams per tree mixed with water. Foliar spray: 5-10 grams per liter of water. For all crops: 1-2 kg per acre.",
+      usageTamil: "தேங்காயுக்கு: ஒரு மரத்திற்கு 10-20 கிராம் நீருடன் கலக்கவும். இலை தெளிப்பு: ஒரு லிட்டர் நீருக்கு 5-10 கிராம். அனைத்து பயிர்களுக்கு: ஏக்கருக்கு 1-2 கிலோ.",
       crops: ["Coconut", "All Crops"],
       image: "/images/bio-fertilizers/boron-plus.jpg"
     },
@@ -151,10 +155,10 @@ const BioFertilizerProducts = () => {
     },
     {
       id: 6,
-      name: "PSEUDOMONAS",
-      nameTamil: "சூடோமோனாஸ்",
-      description: "Beneficial bacteria for root and stem health",
-      descriptionTamil: "வேர் மற்றும் தண்டு ஆரோக்கியத்திற்கான நன்மை பயக்கும் பாக்டீரியா",
+      name: "PSEUDO PLUS",
+      nameTamil: "சூடோ பிளஸ்",
+      description: "Beneficial bacteria for root and stem health - helps control coconut root wilt disease",
+      descriptionTamil: "வேர் மற்றும் தண்டு ஆரோக்கியத்திற்கான நன்மை பயக்கும் பாக்டீரியா - தேங்காய் வேர் வாடல் நோயை கட்டுப்படுத்த உதவுகிறது",
       price: "₹300",
       quantity: "1 kg",
       benefits: [
@@ -162,129 +166,147 @@ const BioFertilizerProducts = () => {
         "Effective against stem rot and neck rot diseases",
         "Contains beneficial bacteria for root and stem health",
         "Improves overall plant immunity",
-        "Natural disease prevention"
+        "Natural disease prevention",
+        "Specifically designed for coconut trees",
+        "Can be mixed with water for easy application"
       ],
       benefitsTamil: [
         "தேங்காய் வேர் வாடல் நோயை கட்டுப்படுத்த உதவுகிறது",
         "தண்டு அழுகல் மற்றும் கழுத்து அழுகல் நோய்களுக்கு பயனுள்ளது",
         "வேர் மற்றும் தண்டு ஆரோக்கியத்திற்கான நன்மை பயக்கும் பாக்டீரியா கொண்டது",
         "ஒட்டுமொத்த தாவர நோய் எதிர்ப்பு சக்தியை மேம்படுத்துகிறது",
-        "இயற்கை நோய் தடுப்பு"
+        "இயற்கை நோய் தடுப்பு",
+        "குறிப்பாக தேங்காய் மரங்களுக்காக வடிவமைக்கப்பட்டது",
+        "எளிதான பயன்பாட்டிற்கு நீருடன் கலக்கலாம்"
       ],
-      usage: "2-5 kg per acre, 25-50 grams per coconut tree. Mix with water and apply to soil.",
-      usageTamil: "ஏக்கருக்கு 2-5 கிலோ, ஒரு தேங்காய் மரத்திற்கு 25-50 கிராம். நீருடன் கலந்து மண்ணில் பயன்படுத்தவும்.",
+      usage: "For coconut: 25-50 grams per tree mixed with water. For all crops: 2-5 kg per acre. Apply to soil.",
+      usageTamil: "தேங்காயுக்கு: ஒரு மரத்திற்கு 25-50 கிராம் நீருடன் கலக்கவும். அனைத்து பயிர்களுக்கு: ஏக்கருக்கு 2-5 கிலோ. மண்ணில் பயன்படுத்தவும்.",
       crops: ["Coconut", "All Crops"],
       image: "/images/bio-fertilizers/pseudo-plus.jpg"
     },
     {
       id: 7,
-      name: "NPK LIQUID",
-      nameTamil: "NPK திரவ",
-      description: "Essential for early plant growth and increased root absorption",
-      descriptionTamil: "ஆரம்ப தாவர வளர்ச்சிக்கு அவசியம் மற்றும் வேர் உறிஞ்சுதல் அதிகரிப்பு",
+      name: "NPK LIQUID ORGANIC CARBON",
+      nameTamil: "NPK திரவ கரிம கார்பன்",
+      description: "Soil NPK Micro Nutrients for all crops - essential for early growth and increased root absorption",
+      descriptionTamil: "அனைத்து பயிர்களுக்கான மண் NPK நுண்ணூட்டச்சத்துக்கள் - ஆரம்ப வளர்ச்சிக்கு அவசியம் மற்றும் வேர் உறிஞ்சுதல் அதிகரிப்பு",
       price: "₹1,200",
       quantity: "10 lit",
       packaging: ["10 lit - ₹1,200", "5 lit - ₹600"],
       benefits: [
-        "Increases root absorption by 20-30% for higher yields",
-        "Contains essential micronutrients: Nitrogen, Phosphorus, Potassium",
-        "Rich in organic carbon and organic minerals",
-        "Suitable for all crops"
+        "Primary nutrient essential for early growth of crops",
+        "Increases root absorption capacity leading to 20-30% yield increase",
+        "Contains micronutrients: Nitrogen, Phosphorus, Potassium, Organic Carbon, and Organic Minerals",
+        "Suitable for all crops including coconut, rice, wheat, and vegetables",
+        "Can be mixed with irrigation water for easy application"
       ],
       benefitsTamil: [
-        "20-30% வேர் உறிஞ்சுதல் அதிகரிப்பு மூலம் அதிக விளைச்சல்",
-        "அத்தியாவசிய நுண்ணூட்டச்சத்துக்கள்: நைட்ரஜன், பாஸ்பரஸ், பொட்டாசியம்",
-        "கரிம கார்பன் மற்றும் கரிம கனிமங்கள் நிறைந்தது",
-        "அனைத்து பயிர்களுக்கும் ஏற்றது"
+        "பயிர்களின் ஆரம்ப வளர்ச்சிக்கு அவசியமான முதன்மை ஊட்டச்சத்து",
+        "20-30% விளைச்சல் அதிகரிப்புக்கு வழிவகுக்கும் வேர் உறிஞ்சுதல் திறனை அதிகரிக்கிறது",
+        "நுண்ணூட்டச்சத்துக்கள் கொண்டது: நைட்ரஜன், பாஸ்பரஸ், பொட்டாசியம், கரிம கார்பன் மற்றும் கரிம கனிமங்கள்",
+        "தேங்காய், நெல், கோதுமை மற்றும் காய்கறிகள் உட்பட அனைத்து பயிர்களுக்கும் ஏற்றது",
+        "எளிதான பயன்பாட்டிற்கு நீர்ப்பாசன நீருடன் கலக்கலாம்"
       ],
-      usage: "5 liters per acre for short-term crops, up to 10 liters per acre for long-term crops. Mix with irrigation water.",
-      usageTamil: "குறுகிய கால பயிர்களுக்கு ஏக்கருக்கு 5 லிட்டர், நீண்ட கால பயிர்களுக்கு ஏக்கருக்கு 10 லிட்டர் வரை. நீர்ப்பாசன நீருடன் கலக்கவும்.",
-      crops: ["Coconut", "Rice/Wheat", "Brinjal", "All Crops"],
+      usage: "Short-term crops: 5 liters per acre. Long-term crops: up to 10 liters per acre. Mix with irrigation water.",
+      usageTamil: "குறுகிய கால பயிர்கள்: ஏக்கருக்கு 5 லிட்டர். நீண்ட கால பயிர்கள்: ஏக்கருக்கு 10 லிட்டர் வரை. நீர்ப்பாசன நீருடன் கலக்கவும்.",
+      crops: ["Coconut", "All Crops"],
       image: "/images/bio-fertilizers/soilnpk.png"
     },
     {
       id: 8,
       name: "MICRO NUTRIENT SPECIAL TONIC",
       nameTamil: "நுண்ணூட்டச்சத்து சிறப்பு டானிக்",
-      description: "Specialized micronutrient formula for enhanced plant growth",
-      descriptionTamil: "மேம்பட்ட தாவர வளர்ச்சிக்கான சிறப்பு நுண்ணூட்டச்சத்து சூத்திரம்",
+      description: "Specialized micronutrient formula for coconut trees - enhances photosynthesis and prevents premature fruit shedding",
+      descriptionTamil: "தேங்காய் மரங்களுக்கான சிறப்பு நுண்ணூட்டச்சத்து சூத்திரம் - ஒளிச்சேர்க்கையை மேம்படுத்தி குறைவான கனிகளின் விழுதலை தடுக்கிறது",
       price: "₹5,250",
       quantity: "10 lit",
       packaging: ["10L - ₹5,250", "5L - ₹2,625", "1L - ₹525"],
       benefits: [
-        "Comprehensive micronutrient solution",
-        "Enhances plant growth and development",
-        "Improves nutrient absorption",
-        "Boosts overall plant health",
-        "Suitable for all crop types"
+        "Enhances photosynthesis in coconut trees",
+        "Reduces premature shedding of immature coconuts",
+        "Increases number of coconuts per tree",
+        "Improves coconut weight and quality",
+        "Prevents 'sorikkai' disease in coconuts",
+        "Provides drought resistance to coconut trees",
+        "High micronutrient content for optimal growth"
       ],
       benefitsTamil: [
-        "விரிவான நுண்ணூட்டச்சத்து தீர்வு",
-        "தாவர வளர்ச்சி மற்றும் வளர்ச்சியை மேம்படுத்துகிறது",
-        "ஊட்டச்சத்து உறிஞ்சுதலை மேம்படுத்துகிறது",
-        "ஒட்டுமொத்த தாவர ஆரோக்கியத்தை அதிகரிக்கிறது",
-        "அனைத்து பயிர் வகைகளுக்கும் ஏற்றது"
+        "தேங்காய் மரங்களில் ஒளிச்சேர்க்கையை மேம்படுத்துகிறது",
+        "குறைவான தேங்காய்களின் விரைவான விழுதலை குறைக்கிறது",
+        "ஒரு மரத்தில் தேங்காய்களின் எண்ணிக்கையை அதிகரிக்கிறது",
+        "தேங்காயின் எடை மற்றும் தரத்தை மேம்படுத்துகிறது",
+        "தேங்காய்களில் 'சொரிக்காய்' நோயை தடுக்கிறது",
+        "தேங்காய் மரங்களுக்கு வறட்சி எதிர்ப்பு தருகிறது",
+        "உகந்த வளர்ச்சிக்கான அதிக நுண்ணூட்டச்சத்து உள்ளடக்கம்"
       ],
-      usage: "Apply as per crop requirements and growth stage.",
-      usageTamil: "பயிர் தேவைகள் மற்றும் வளர்ச்சி நிலைக்கு ஏற்ப பயன்படுத்தவும்.",
-      crops: ["All Crops"],
+      usage: "25 ml mixed with water per coconut tree. Apply to roots. Can be mixed with insecticides and fungicides.",
+      usageTamil: "ஒரு தேங்காய் மரத்திற்கு 25 மில்லி நீருடன் கலக்கவும். வேர்களில் பயன்படுத்தவும். பூச்சிக்கொல்லிகள் மற்றும் பூஞ்சைக்கொல்லிகளுடன் கலக்கலாம்.",
+      crops: ["Coconut"],
       image: "/images/bio-fertilizers/micro-nutrient-coconut.jpg"
     },
     {
       id: 9,
       name: "NUTRI GOLD",
       nameTamil: "நியூட்ரி கோல்ட்",
-      description: "Foliar spray for enhanced plant respiration and nutrient absorption",
-      descriptionTamil: "தாவர சுவாசம் மற்றும் ஊட்டச்சத்து உறிஞ்சுதல் மேம்பாட்டுக்கான இலை தெளிப்பு",
+      description: "Foliar spray for enhanced plant respiration and nutrient absorption - for all agriculture crops",
+      descriptionTamil: "தாவர சுவாசம் மற்றும் ஊட்டச்சத்து உறிஞ்சுதல் மேம்பாட்டுக்கான இலை தெளிப்பு - அனைத்து விவசாய பயிர்களுக்கு",
       price: "₹500",
       quantity: "1 lit",
       packaging: ["1L - ₹500", "5L - ₹2,500", "¼L - ₹125"],
       benefits: [
         "Improves plant respiration and ion exchange",
         "Aids in complete absorption of macro and micronutrients",
-        "Enhances photosynthesis due to glutamic acid",
+        "Enhances photosynthesis due to glutamic acid content",
         "Prevents shedding of leaves, flowers, and fruits",
-        "Removes soil toxicity"
+        "Removes soil toxicity",
+        "Suitable for all agriculture crops",
+        "Improves crop respiration and nutrient uptake"
       ],
       benefitsTamil: [
         "தாவர சுவாசம் மற்றும் அயன் பரிமாற்றத்தை மேம்படுத்துகிறது",
         "மேக்ரோ மற்றும் நுண்ணூட்டச்சத்துக்களின் முழுமையான உறிஞ்சுதலை உதவுகிறது",
-        "குளுடாமிக் அமிலம் காரணமாக ஒளிச்சேர்க்கையை மேம்படுத்துகிறது",
+        "குளுடாமிக் அமில உள்ளடக்கம் காரணமாக ஒளிச்சேர்க்கையை மேம்படுத்துகிறது",
         "இலைகள், பூக்கள் மற்றும் பழங்களின் விழுதலை தடுக்கிறது",
-        "மண் நச்சுத்தன்மையை நீக்குகிறது"
+        "மண் நச்சுத்தன்மையை நீக்குகிறது",
+        "அனைத்து விவசாய பயிர்களுக்கும் ஏற்றது",
+        "பயிர் சுவாசம் மற்றும் ஊட்டச்சத்து உறிஞ்சுதலை மேம்படுத்துகிறது"
       ],
-      usage: "5 to 10 ml per liter of water. Apply as foliar spray.",
-      usageTamil: "ஒரு லிட்டர் நீருக்கு 5 முதல் 10 மில்லி. இலை தெளிப்பாக பயன்படுத்தவும்.",
-      crops: ["Potato", "Tomato", "Brinjal", "Banana"],
+      usage: "5 to 10 ml per liter of water. Apply as foliar spray on leaves.",
+      usageTamil: "ஒரு லிட்டர் நீருக்கு 5 முதல் 10 மில்லி. இலைகளில் இலை தெளிப்பாக பயன்படுத்தவும்.",
+      crops: ["All Crops"],
       image: "/images/bio-fertilizers/nutri-gold.jpg"
     },
     {
       id: 10,
       name: "BIO MANURE",
       nameTamil: "உயிர் உரம்",
-      description: "Complete organic manure with NPK and essential nutrients",
-      descriptionTamil: "NPK மற்றும் அத்தியாவசிய ஊட்டச்சத்துக்களுடன் முழுமையான கரிம உரம்",
+      description: "Complete organic manure with NPK, Micro Nutrients, Secondary Nutrients, and Organic Carbon - naturally decomposed fertilizer",
+      descriptionTamil: "NPK, நுண்ணூட்டச்சத்துக்கள், இரண்டாம் நிலை ஊட்டச்சத்துக்கள் மற்றும் கரிம கார்பன் கொண்ட முழுமையான கரிம உரம் - இயற்கையாக சிதைந்த உரம்",
       price: "₹1,000",
       quantity: "50 kg",
       minimumOrder: "Minimum 10 bags required",
       minimumOrderTamil: "குறைந்தபட்சம் 10 பைகள் தேவை",
       benefits: [
-        "Contains NPK, Neem Cake, Secondary Nutrients, Organic Carbon",
-        "Rich in micronutrients and minerals",
-        "Naturally produced from poultry farm waste, sugar mill waste, and tapioca",
+        "Contains NPK, Neem Cake, Micro Nutrients, Secondary Nutrients, Organic Carbon, and Minerals",
+        "Rich in essential nutrients and minerals for plants",
+        "Naturally produced from poultry farm waste, sugar mill waste, and tapioca waste",
+        "Contains high levels of secondary nutrients",
         "Improves soil fertility and structure",
-        "Suitable for all types of crops"
+        "Suitable for all types of crops including coconut, banana, and chili",
+        "Decomposed fertilizer with essential nutrients and minerals"
       ],
       benefitsTamil: [
-        "NPK, வேம்பு கேக், இரண்டாம் நிலை ஊட்டச்சத்துக்கள், கரிம கார்பன் கொண்டது",
-        "நுண்ணூட்டச்சத்துக்கள் மற்றும் கனிமங்கள் நிறைந்தது",
+        "NPK, வேம்பு கேக், நுண்ணூட்டச்சத்துக்கள், இரண்டாம் நிலை ஊட்டச்சத்துக்கள், கரிம கார்பன் மற்றும் கனிமங்கள் கொண்டது",
+        "தாவரங்களுக்கு அத்தியாவசிய ஊட்டச்சத்துக்கள் மற்றும் கனிமங்கள் நிறைந்தது",
         "கோழி பண்ணை கழிவுகள், சர்க்கரை ஆலை கழிவுகள் மற்றும் மரவள்ளி கழிவுகளிலிருந்து இயற்கையாக தயாரிக்கப்பட்டது",
+        "அதிக அளவு இரண்டாம் நிலை ஊட்டச்சத்துக்கள் கொண்டது",
         "மண் வளத்தன்மை மற்றும் கட்டமைப்பை மேம்படுத்துகிறது",
-        "அனைத்து வகையான பயிர்களுக்கும் ஏற்றது"
+        "தேங்காய், வாழை, மிளகாய் உட்பட அனைத்து வகையான பயிர்களுக்கும் ஏற்றது",
+        "அத்தியாவசிய ஊட்டச்சத்துக்கள் மற்றும் கனிமங்களுடன் சிதைந்த உரம்"
       ],
-      usage: "200-300 kg per acre for short-term crops, 3 kg per coconut tree. Apply to soil and mix well.",
-      usageTamil: "குறுகிய கால பயிர்களுக்கு ஏக்கருக்கு 200-300 கிலோ, ஒரு தேங்காய் மரத்திற்கு 3 கிலோ. மண்ணில் பயன்படுத்தி நன்கு கலக்கவும்.",
-      crops: ["Coconut", "Banana", "Chili", "All Crops"],
+      usage: "For coconut: 3 kg per tree. For all crops: 200-300 kg per acre. Apply to soil and mix well.",
+      usageTamil: "தேங்காயுக்கு: ஒரு மரத்திற்கு 3 கிலோ. அனைத்து பயிர்களுக்கு: ஏக்கருக்கு 200-300 கிலோ. மண்ணில் பயன்படுத்தி நன்கு கலக்கவும்.",
+      crops: ["Coconut", "All Crops"],
       image: "/images/bio-fertilizers/bio-manure.jpg"
     }
   ];
